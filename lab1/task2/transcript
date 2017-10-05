@@ -1,0 +1,268 @@
+do task2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd.vhd(29): (vcom-1294) Declaration with designator "reset" already exists in this region.
+# ** =====> Prior declaration of "reset" is at gcd.vhd(20).
+# ** Error: gcd.vhd(41): Integer literal 0 is not of type ieee.std_logic_1164.STD_LOGIC.
+# ** Error: gcd.vhd(42): Integer literal 0 is not of type ieee.std_logic_1164.STD_LOGIC.
+# ** Error: gcd.vhd(44): Integer literal 0 is not of type ieee.std_logic_1164.STD_LOGIC.
+# ** Error: gcd.vhd(55): Expression is not a signal.
+# ** Error: gcd.vhd(59): near "'": syntax error
+# ** Error: gcd.vhd(100): near "'": syntax error
+# ** Error: gcd.vhd(103): near "0": syntax error
+# ** Error: gcd.vhd(113): (vcom-1136) Unknown identifier "result".
+# ** Error: gcd.vhd(122): near "when": (vcom-1576) expecting END.
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task2.do line 30
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -quiet gcd.vhd"
+do task2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd.vhd(41): Integer literal 0 is not of type ieee.std_logic_1164.STD_LOGIC.
+# ** Error: gcd.vhd(42): Integer literal 0 is not of type ieee.std_logic_1164.STD_LOGIC.
+# ** Error: gcd.vhd(44): Integer literal 0 is not of type ieee.std_logic_1164.STD_LOGIC.
+# ** Error: gcd.vhd(55): Expression is not a signal.
+# ** Error: gcd.vhd(59): near "'": syntax error
+# ** Error: gcd.vhd(100): near "'": syntax error
+# ** Error: gcd.vhd(103): near "0": syntax error
+# ** Error: gcd.vhd(113): (vcom-1136) Unknown identifier "result".
+# ** Error: gcd.vhd(122): near "when": (vcom-1576) expecting END.
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task2.do line 30
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -quiet gcd.vhd"
+do task2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd.vhd(55): Expression is not a signal.
+# ** Error: gcd.vhd(59): near "'": syntax error
+# ** Error: gcd.vhd(100): near "'": syntax error
+# ** Error: gcd.vhd(103): near "0": syntax error
+# ** Error: gcd.vhd(113): (vcom-1136) Unknown identifier "result".
+# ** Error: gcd.vhd(122): near "when": (vcom-1576) expecting END.
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task2.do line 30
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -quiet gcd.vhd"
+do task2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd.vhd(59): near "'": syntax error
+# ** Error: gcd.vhd(100): near "'": syntax error
+# ** Error: gcd.vhd(103): near "0": syntax error
+# ** Error: gcd.vhd(113): (vcom-1136) Unknown identifier "result".
+# ** Error: gcd.vhd(122): near "when": (vcom-1576) expecting END.
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task2.do line 30
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -quiet gcd.vhd"
+do task2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd.vhd(103): near "0": syntax error
+# ** Error: gcd.vhd(113): (vcom-1136) Unknown identifier "result".
+# ** Error: gcd.vhd(122): near "when": (vcom-1576) expecting END.
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task2.do line 30
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -quiet gcd.vhd"
+do task2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd.vhd(113): (vcom-1136) Unknown identifier "result".
+# ** Error: gcd.vhd(128): (vcom-1136) Unknown identifier "result".
+# ** Error (suppressible): gcd.vhd(128): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Error: gcd.vhd(132): Illegal target for signal assignment.
+# ** Error: gcd.vhd(132): (vcom-1136) Unknown identifier "b_or_alu".
+# ** Error: gcd.vhd(150): Signal "c_intern" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: gcd.vhd(154): Signal "c_intern" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: gcd.vhd(157): near ";": (vcom-1576) expecting IF.
+# ** Error: gcd.vhd(165): Type error resolving infix expression "-" as type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd.vhd(166): Type error resolving infix expression "-" as type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd.vhd(167): Signal "reg_a" is type ieee.NUMERIC_STD.UNSIGNED; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd.vhd(168): Signal "reg_b" is type ieee.NUMERIC_STD.UNSIGNED; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd.vhd(170): near "alu": (vcom-1576) expecting PROCESS.
+# ** Error: gcd.vhd(173): (vcom-1389) OTHERS aggregate cannot be operand of operator with unconstrained array formal.
+# ** Error: gcd.vhd(173): Illegal sequential statement.
+# ** Error: gcd.vhd(176): Illegal sequential statement.
+# ** Error: gcd.vhd(176): Signal "AB" is type ieee.NUMERIC_STD.UNSIGNED; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd.vhd(177): near "c_intern": (vcom-1576) expecting ';' or ','.
+# ** Error: gcd.vhd(179): Signal "c_intern" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: gcd.vhd(183): VHDL Compiler exiting
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task2.do line 30
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -quiet gcd.vhd"
+do task2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd.vhd(132): Illegal target for signal assignment.
+# ** Error: gcd.vhd(132): (vcom-1136) Unknown identifier "b_or_alu".
+# ** Error: gcd.vhd(150): Signal "c_intern" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: gcd.vhd(154): Signal "c_intern" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: gcd.vhd(157): near ";": (vcom-1576) expecting IF.
+# ** Error: gcd.vhd(165): Type error resolving infix expression "-" as type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd.vhd(166): Type error resolving infix expression "-" as type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd.vhd(167): Signal "reg_a" is type ieee.NUMERIC_STD.UNSIGNED; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd.vhd(168): Signal "reg_b" is type ieee.NUMERIC_STD.UNSIGNED; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd.vhd(170): near "alu": (vcom-1576) expecting PROCESS.
+# ** Error: gcd.vhd(173): (vcom-1389) OTHERS aggregate cannot be operand of operator with unconstrained array formal.
+# ** Error: gcd.vhd(173): Illegal sequential statement.
+# ** Error: gcd.vhd(176): Illegal sequential statement.
+# ** Error: gcd.vhd(176): Signal "AB" is type ieee.NUMERIC_STD.UNSIGNED; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd.vhd(177): near "c_intern": (vcom-1576) expecting ';' or ','.
+# ** Error: gcd.vhd(179): Signal "c_intern" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: gcd.vhd(183): VHDL Compiler exiting
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task2.do line 30
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -quiet gcd.vhd"
+do task2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd.vhd(150): Signal "c_intern" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: gcd.vhd(154): Signal "c_intern" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: gcd.vhd(157): near ";": (vcom-1576) expecting IF.
+# ** Error: gcd.vhd(165): Type error resolving infix expression "-" as type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd.vhd(166): Type error resolving infix expression "-" as type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd.vhd(167): Signal "reg_a" is type ieee.NUMERIC_STD.UNSIGNED; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd.vhd(168): Signal "reg_b" is type ieee.NUMERIC_STD.UNSIGNED; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd.vhd(170): near "alu": (vcom-1576) expecting PROCESS.
+# ** Error: gcd.vhd(173): (vcom-1389) OTHERS aggregate cannot be operand of operator with unconstrained array formal.
+# ** Error: gcd.vhd(173): Illegal sequential statement.
+# ** Error: gcd.vhd(176): Illegal sequential statement.
+# ** Error: gcd.vhd(176): Signal "AB" is type ieee.NUMERIC_STD.UNSIGNED; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd.vhd(177): near "c_intern": (vcom-1576) expecting ';' or ','.
+# ** Error: gcd.vhd(179): Signal "c_intern" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: gcd.vhd(183): VHDL Compiler exiting
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task2.do line 30
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -quiet gcd.vhd"
+do task2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd.vhd(157): near ";": (vcom-1576) expecting IF.
+# ** Error: gcd.vhd(165): Type error resolving infix expression "-" as type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd.vhd(166): Type error resolving infix expression "-" as type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd.vhd(167): Signal "reg_a" is type ieee.NUMERIC_STD.UNSIGNED; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd.vhd(168): Signal "reg_b" is type ieee.NUMERIC_STD.UNSIGNED; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd.vhd(170): near "alu": (vcom-1576) expecting PROCESS.
+# ** Error: gcd.vhd(173): (vcom-1389) OTHERS aggregate cannot be operand of operator with unconstrained array formal.
+# ** Error: gcd.vhd(173): Illegal sequential statement.
+# ** Error: gcd.vhd(176): Illegal sequential statement.
+# ** Error: gcd.vhd(177): near "c_intern": (vcom-1576) expecting ';' or ','.
+# ** Error: gcd.vhd(183): VHDL Compiler exiting
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task2.do line 30
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -quiet gcd.vhd"
+do task2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd.vhd(158): near ";": (vcom-1576) expecting IF.
+# ** Error: gcd.vhd(170): near "alu": (vcom-1576) expecting PROCESS.
+# ** Error: gcd.vhd(173): (vcom-1389) OTHERS aggregate cannot be operand of operator with unconstrained array formal.
+# ** Error: gcd.vhd(173): Illegal sequential statement.
+# ** Error: gcd.vhd(176): Illegal sequential statement.
+# ** Error: gcd.vhd(177): near "c_intern": (vcom-1576) expecting ';' or ','.
+# ** Error: gcd.vhd(183): VHDL Compiler exiting
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task2.do line 30
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -quiet gcd.vhd"
+do task2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd.vhd(170): near "alu": (vcom-1576) expecting PROCESS.
+# ** Error: gcd.vhd(173): (vcom-1389) OTHERS aggregate cannot be operand of operator with unconstrained array formal.
+# ** Error: gcd.vhd(173): Illegal sequential statement.
+# ** Error: gcd.vhd(176): Illegal sequential statement.
+# ** Error: gcd.vhd(177): near "c_intern": (vcom-1576) expecting ';' or ','.
+# ** Error: gcd.vhd(183): VHDL Compiler exiting
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task2.do line 30
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -quiet gcd.vhd"
+do task2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd.vhd(173): (vcom-1389) OTHERS aggregate cannot be operand of operator with unconstrained array formal.
+# ** Error: gcd.vhd(177): Type error resolving infix expression "<=" as type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: gcd.vhd(164): (vcom-1339) Case statement choices cover only 4 out of 81 cases.
+# ** Error: gcd.vhd(175): (vcom-1339) Selected signal assignment choices cover only 2 out of 9 cases.
+# ** Error: gcd.vhd(183): VHDL Compiler exiting
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task2.do line 30
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -quiet gcd.vhd"
+do task2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd.vhd(173): (vcom-1581) No feasible entries for infix operator '='.
+# ** Error: gcd.vhd(173): Type error resolving infix expression "=" as type std.STANDARD.BOOLEAN.
+# ** Error: gcd.vhd(177): Type error resolving infix expression "<=" as type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: gcd.vhd(164): (vcom-1339) Case statement choices cover only 4 out of 81 cases.
+# ** Error: gcd.vhd(175): (vcom-1339) Selected signal assignment choices cover only 2 out of 9 cases.
+# ** Error: gcd.vhd(183): VHDL Compiler exiting
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task2.do line 30
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -quiet gcd.vhd"
+do task2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd.vhd(177): Type error resolving infix expression "<=" as type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: gcd.vhd(164): (vcom-1339) Case statement choices cover only 4 out of 81 cases.
+# ** Error: gcd.vhd(175): (vcom-1339) Selected signal assignment choices cover only 2 out of 9 cases.
+# ** Error: gcd.vhd(183): VHDL Compiler exiting
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task2.do line 30
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -quiet gcd.vhd"
+do task2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd.vhd(177): near "<=": syntax error
+# ** Error: gcd.vhd(164): (vcom-1339) Case statement choices cover only 4 out of 81 cases.
+# ** Error: gcd.vhd(183): VHDL Compiler exiting
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task2.do line 30
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -quiet gcd.vhd"
+do task2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd.vhd(176): near "AB": (vcom-1576) expecting <= or :=.
+# ** Error: gcd.vhd(164): (vcom-1339) Case statement choices cover only 4 out of 81 cases.
+# ** Error: gcd.vhd(183): VHDL Compiler exiting
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task2.do line 30
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -quiet gcd.vhd"
+do task2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd.vhd(164): (vcom-1339) Case statement choices cover only 4 out of 81 cases.
+# ** Error: gcd.vhd(175): (vcom-1339) Selected signal assignment choices cover only 2 out of 9 cases.
+# ** Error: gcd.vhd(183): VHDL Compiler exiting
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task2.do line 30
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -quiet gcd.vhd"
+
+
+
+
+
+do task2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd.vhd(164): (vcom-1339) Case statement choices cover only 4 out of 81 cases.
+# ** Error: gcd.vhd(175): (vcom-1339) Selected signal assignment choices cover only 2 out of 9 cases.
+# ** Error: gcd.vhd(183): VHDL Compiler exiting
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task2.do line 30
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -quiet gcd.vhd"

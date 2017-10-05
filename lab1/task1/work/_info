@@ -1,0 +1,136 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/thor/lab1/task1
+Eenv
+Z1 w1502884667
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8env.vhd
+Z6 Fenv.vhd
+l0
+L25
+VX^_VTiengT^hojWG@FKbc0
+!s100 BgL`12aT<l9VgMXFdWobS3
+Z7 OV;C;10.5c;63
+32
+Z8 !s110 1505378592
+!i10b 1
+Z9 !s108 1505378592.000000
+Z10 !s90 -reportprogress|300|-quiet|env.vhd|
+Z11 !s107 env.vhd|
+!i113 1
+Z12 o-quiet
+Z13 tExplicit 1 CvgOpt 0
+Abehaviour
+R2
+R3
+R4
+DEx4 work 3 env 0 22 X^_VTiengT^hojWG@FKbc0
+l58
+L42
+VZ7_a;jR1eG[o<deRZ9PhO2
+!s100 ?^NXF?_e2dHV=g[G@D1lj2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Egcd_sys
+w1502884113
+R2
+R3
+R4
+R0
+8gcd_entity.vhd
+Fgcd_entity.vhd
+l0
+L28
+VU^JnjaPYQZ_mU>2[VABkJ0
+!s100 LHTic:H>EN?aji^j_Hz[F2
+R7
+32
+R8
+!i10b 1
+R9
+!s90 -reportprogress|300|-quiet|gcd_entity.vhd|
+!s107 gcd_entity.vhd|
+!i113 1
+R12
+R13
+Aspecification
+w1502884161
+R2
+R3
+R4
+DEx4 work 7 gcd_sys 0 22 U^JnjaPYQZ_mU>2[VABkJ0
+8gcd_spec.vhd
+Fgcd_spec.vhd
+l53
+L52
+V;65oKMoXf`k?Bb;SUjdgd1
+!s100 6O:MTLm3:X9z@8W74<k8@3
+R7
+32
+R8
+!i10b 1
+R9
+!s90 -reportprogress|300|-quiet|gcd_spec.vhd|
+!s107 gcd_spec.vhd|
+!i113 1
+R12
+R13
+Etestbench
+Z14 w1502884194
+R2
+R3
+R4
+R0
+Z15 8test.vhd
+Z16 Ftest.vhd
+l0
+L27
+VFIZ[EcEVCl^NfZeQ9IYcU2
+!s100 B:@>PUP3_FS6Skgo=Y=VJ0
+R7
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-quiet|test.vhd|
+Z18 !s107 test.vhd|
+!i113 1
+R12
+R13
+Astructure
+R2
+R3
+R4
+DEx4 work 9 testbench 0 22 FIZ[EcEVCl^NfZeQ9IYcU2
+l59
+L35
+V8GJ7367e@N^iXdCCEIQl;2
+!s100 <6:nJJ0SWGf<<V_Imb8bX0
+R7
+32
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13

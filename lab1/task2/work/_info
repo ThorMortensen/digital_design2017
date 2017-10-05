@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/thor/lab1/task2
+Edebounce
+w1471789666
+Z0 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 d/home/thor/aaa_vhdl2017/lab1/task2
+8debounce_entity.vhd
+Fdebounce_entity.vhd
+l0
+L5
+VNie[zcjkB[T_08ERd8Oh^2
+!s100 >Y:Z`l?lCTkD9EOW[AXVB3
+Z4 OV;C;10.5c;63
+32
+Z5 !s110 1505988246
+!i10b 1
+Z6 !s108 1505988246.000000
+!s90 -reportprogress|300|-quiet|debounce_entity.vhd|
+!s107 debounce_entity.vhd|
+!i113 1
+Z7 o-quiet
+Z8 tExplicit 1 CvgOpt 0
+Asim_behav
+w1471789728
+R0
+R1
+R2
+DEx4 work 8 debounce 0 22 Nie[zcjkB[T_08ERd8Oh^2
+8debounce_sim.vhd
+Fdebounce_sim.vhd
+l15
+L13
+V0JHKlWomzl3;0maY9iPE22
+!s100 BiCkPQd5Hm>Yfo[Q=7V1C2
+R4
+32
+R5
+!i10b 1
+R6
+!s90 -reportprogress|300|-quiet|debounce_sim.vhd|
+!s107 debounce_sim.vhd|
+!i113 1
+R7
+R8
+Egcd
+w1505988014
+R0
+R1
+R2
+R3
+8gcd.vhd
+Fgcd.vhd
+l0
+L18
+VNV?Y244Ke]XnU2AdaMMIU1
+!s100 EX;]h`LYF:RDZWcWeoiII3
+R4
+32
+R5
+!i10b 1
+R6
+!s90 -reportprogress|300|-quiet|gcd.vhd|
+!s107 gcd.vhd|
+!i113 1
+R7
+R8

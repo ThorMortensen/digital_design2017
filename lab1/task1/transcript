@@ -1,0 +1,16 @@
+do task1.do
+# vsim -do "sim.do" -novopt testbench 
+# Start time: 10:43:12 on Sep 14,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(structure)
+# Loading work.env(behaviour)
+# Loading work.gcd_sys(specification)
+# do sim.do
+# ** Failure: Test passed
+#    Time: 385 ns  Iteration: 0  Process: /testbench/environment/line__62 File: env.vhd
+# Break in Process line__62 at env.vhd line 117
+# End time: 11:18:22 on Sep 14,2017, Elapsed time: 0:35:10
+# Errors: 0, Warnings: 0

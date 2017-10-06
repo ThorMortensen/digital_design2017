@@ -5704,3 +5704,402 @@ do resrun.do
 # End time: 22:28:44 on Oct 05,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Loading work.gcd(fsmd)
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 23:07:51 on Oct 05,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Error: gcd.vhd(49): 'SELECT_A_SUB_B' is not a signal.
+# ** Error: gcd.vhd(134): VHDL Compiler exiting
+# End time: 23:07:51 on Oct 05,2017, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 23:08:04 on Oct 05,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 23:08:04 on Oct 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 23:09:30 on Oct 05,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 23:09:31 on Oct 05,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+# ** Failure: Wrong result!
+#    Time: 140 ns  Iteration: 2  Process: /testbench/environment/line__62 File: ../task1/env.vhd
+# Break in Process line__62 at ../task1/env.vhd line 109
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 23:17:34 on Oct 05,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Error: gcd.vhd(42): Object alias must refer to a variable, signal, constant, or file.
+# ** Error: gcd.vhd(42): (vcom-1136) Unknown identifier "res".
+# ** Error: gcd.vhd(139): VHDL Compiler exiting
+# End time: 23:17:35 on Oct 05,2017, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 0
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 23:17:51 on Oct 05,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 23:17:52 on Oct 05,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/GCD_module/u2/res'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/GCD_module/u2/res'. 
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 23:19:03 on Oct 05,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 23:19:03 on Oct 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 23:51:33 on Oct 05,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 23:51:34 on Oct 05,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+add wave -position end  sim:/testbench/GCD_module/u2/resA
+add wave -position end  sim:/testbench/GCD_module/u2/resB
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 23:52:48 on Oct 05,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 23:52:48 on Oct 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 23:53:47 on Oct 05,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 23:53:47 on Oct 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 00:17:10 on Oct 06,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 00:17:11 on Oct 06,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+run -all
+# ** Failure: Test passed
+#    Time: 2600 ns  Iteration: 5  Process: /testbench/environment/line__62 File: ../task1/env.vhd
+# Break in Process line__62 at ../task1/env.vhd line 117
+run -all
+# ** Failure: Test passed
+#    Time: 5140 ns  Iteration: 5  Process: /testbench/environment/line__62 File: ../task1/env.vhd
+# Break in Process line__62 at ../task1/env.vhd line 117
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 00:22:08 on Oct 06,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 00:22:08 on Oct 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 00:28:36 on Oct 06,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 00:28:36 on Oct 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+run -all
+# ** Failure: Test passed
+#    Time: 2600 ns  Iteration: 5  Process: /testbench/environment/line__62 File: ../task1/env.vhd
+# Break in Process line__62 at ../task1/env.vhd line 117
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 00:49:54 on Oct 06,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Error: gcd.vhd(50): near "BEGIN": syntax error
+# ** Error: gcd.vhd(52): Illegal target for signal assignment.
+# ** Error: gcd.vhd(52): (vcom-1136) Unknown identifier "calc_select".
+# ** Error: gcd.vhd(57): Illegal concurrent statement.
+# ** Error: gcd.vhd(60): Illegal concurrent statement.
+# ** Error: gcd.vhd(68): Illegal concurrent statement.
+# ** Error: gcd.vhd(79): Illegal concurrent statement.
+# ** Error: gcd.vhd(90): Illegal concurrent statement.
+# ** Error: gcd.vhd(93): near "PROCESS": (vcom-1576) expecting ';'.
+# End time: 00:49:54 on Oct 06,2017, Elapsed time: 0:00:00
+# Errors: 9, Warnings: 0
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 00:51:30 on Oct 06,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Error: gcd.vhd(52): Illegal target for signal assignment.
+# ** Error: gcd.vhd(52): (vcom-1136) Unknown identifier "calc_select".
+# ** Error: gcd.vhd(115): VHDL Compiler exiting
+# End time: 00:51:30 on Oct 06,2017, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 00:51:57 on Oct 06,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 00:51:57 on Oct 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/GCD_module/u2/calc_select'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/GCD_module/u2/resA'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/GCD_module/u2/resB'. 
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 00:52:16 on Oct 06,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 00:52:16 on Oct 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 00:52:28 on Oct 06,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 00:52:28 on Oct 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 00:53:07 on Oct 06,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 00:53:07 on Oct 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 00:55:29 on Oct 06,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 00:55:29 on Oct 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 00:55:44 on Oct 06,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 00:55:44 on Oct 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+add wave -position end  sim:/testbench/GCD_module/u2/res
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 00:56:21 on Oct 06,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 00:56:21 on Oct 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/thor/digital_design2017/lab1/task2/wave.do
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 00:57:03 on Oct 06,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 00:57:03 on Oct 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 230 ns  Iteration: 4  Instance: /testbench/GCD_module/u2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 235 ns  Iteration: 1  Instance: /testbench/GCD_module/u2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 240 ns  Iteration: 2  Instance: /testbench/GCD_module/u2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 250 ns  Iteration: 2  Instance: /testbench/environment
+# ** Failure: Wrong result!
+#    Time: 250 ns  Iteration: 2  Process: /testbench/environment/line__62 File: ../task1/env.vhd
+# Break in Process line__62 at ../task1/env.vhd line 109
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 00:57:38 on Oct 06,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 00:57:38 on Oct 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 00:58:07 on Oct 06,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 00:58:07 on Oct 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+# ** Failure: Test passed
+#    Time: 2600 ns  Iteration: 5  Process: /testbench/environment/line__62 File: ../task1/env.vhd
+# Break in Process line__62 at ../task1/env.vhd line 117
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 00:58:41 on Oct 06,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 00:58:41 on Oct 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+# ** Failure: Test passed
+#    Time: 2600 ns  Iteration: 5  Process: /testbench/environment/line__62 File: ../task1/env.vhd
+# Break in Process line__62 at ../task1/env.vhd line 117

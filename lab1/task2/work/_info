@@ -94,7 +94,7 @@ R13
 R7
 R8
 Egcd
-Z14 w1507235263
+Z14 w1507244318
 R0
 R1
 R2
@@ -107,9 +107,9 @@ VZ`NdYI28`el@OIMok5<;:3
 !s100 EkBk;2Uk]z>kjH[YoG=O[1
 R4
 32
-Z17 !s110 1507235324
+Z17 !s110 1507244321
 !i10b 1
-Z18 !s108 1507235324.000000
+Z18 !s108 1507244321.000000
 Z19 !s90 -reportprogress|300|gcd.vhd|
 Z20 !s107 gcd.vhd|
 !i113 1
@@ -119,10 +119,10 @@ R0
 R1
 R2
 Z21 DEx4 work 3 gcd 0 22 Z`NdYI28`el@OIMok5<;:3
-l45
+l38
 L27
-Z22 VjS?fAMIZ2fXALGmU=ad1]2
-Z23 !s100 EFfgg1f8`0L?mzah0OVSP2
+VZ^oUH45^I@j[07FF2kf==2
+!s100 Rki?lcoA:k8ZVUG_cU=`E1
 R4
 32
 R17
@@ -133,13 +133,13 @@ R20
 !i113 1
 R8
 Egcd_sys
-Z24 w1502886459
+Z22 w1502886459
 R0
 R1
 R2
 R3
-Z25 8gcd_top.vhd
-Z26 Fgcd_top.vhd
+Z23 8gcd_top.vhd
+Z24 Fgcd_top.vhd
 l0
 L17
 Vd<AKJ;h<Q:W2XLR2n0?3^0
@@ -149,8 +149,8 @@ R4
 R5
 !i10b 1
 R6
-Z27 !s90 -reportprogress|300|-quiet|gcd_top.vhd|
-Z28 !s107 gcd_top.vhd|
+Z25 !s90 -reportprogress|300|-quiet|gcd_top.vhd|
+Z26 !s107 gcd_top.vhd|
 !i113 1
 R7
 R8
@@ -168,19 +168,19 @@ R4
 R5
 !i10b 1
 R6
-R27
-R28
+R25
+R26
 !i113 1
 R7
 R8
 Etestbench
-Z29 w1502884194
+Z27 w1502884194
 R0
 R1
 R2
 R3
-Z30 8../task1/test.vhd
-Z31 F../task1/test.vhd
+Z28 8../task1/test.vhd
+Z29 F../task1/test.vhd
 l0
 L27
 VFIZ[EcEVCl^NfZeQ9IYcU2
@@ -190,8 +190,8 @@ R4
 R5
 !i10b 1
 R6
-Z32 !s90 -reportprogress|300|-quiet|../task1/test.vhd|
-Z33 !s107 ../task1/test.vhd|
+Z30 !s90 -reportprogress|300|-quiet|../task1/test.vhd|
+Z31 !s107 ../task1/test.vhd|
 !i113 1
 R7
 R8
@@ -209,8 +209,8 @@ R4
 R5
 !i10b 1
 R6
-R32
-R33
+R30
+R31
 !i113 1
 R7
 R8

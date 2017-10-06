@@ -1,4 +1,4 @@
 
 vcom gcd.vhd
 restart -f
-run 200 ns
+run 1 ms

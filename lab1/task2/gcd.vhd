@@ -26,80 +26,64 @@ END gcd;
 
 ARCHITECTURE FSMD OF gcd IS
 
-TYPE state_type IS (RESET_STATE, LOAD_A, LOAD_B, ACK_STATE,  SUB_A_B, SUB_B_A, SAVE_A, SAVE_B, RESULT); -- Input your own state names
+TYPE state_type IS (IDLE, LOAD_A, LOAD_B, CALC); -- Input your own state names
 
 SIGNAL reg_a,next_reg_a,next_reg_b,reg_b : unsigned(15 downto 0) := (others => '0');
+SIGNAL state, next_state : state_type := IDLE;
 
-SIGNAL state, next_state : state_type := RESET_STATE;
-
---constant zeros : unsigned(y'range) := (others => '0');
 signal res : unsigned(15 downto 0) := (others => '0');
+alias a_lessthan_b : std_logic is res(15); 
 
-constant SELECT_A_SUB_B : std_logic := '0';
-constant SELECT_B_SUB_A : std_logic := '1';
-
-alias A_LESSTHAN_B : std_logic is res(15); 
-
-signal calc_select : std_logic := SELECT_A_SUB_B;
 
 BEGIN
 
--- Combinatoriel logic
+-- Outputs
+C <= reg_a; 
 
-CL: PROCESS (req,AB,state,reg_a,reg_b, clk)
+-- Sequential logic
+
+res <= (reg_a - reg_b); 
+
+
+-- Combinatorial logic
+CL: PROCESS (req,AB,state,reg_a,reg_b, res)
 BEGIN
   next_state <= next_state;
-  calc_select <= SELECT_A_SUB_B;
   ack <= '0';
   next_reg_a <= reg_a;
   next_reg_b <= reg_b;
 
    CASE (state) IS
-      when RESET_STATE => 
-        
+      when IDLE => 
+
         if req = '1' then 
           next_state <= LOAD_A;
           ack <= '1';
           next_reg_a <= AB;
         end if;
-      
-      when LOAD_A =>
 
+      when LOAD_A =>
 
         if req = '1' then
           next_state <= LOAD_B;
         end if;
-      
-      --when ACK_STATE => 
-      --  ack <= '0';
-      --  if req = '1' then 
-      --    next_state <= LOAD_B;
-      --  end if;
-      
+
       when LOAD_B =>
 
         next_reg_b <= AB;
-        next_state <= SUB_A_B;
+        next_state <= CALC;
 
-      when SUB_A_B => 
+      when CALC => 
         
-
-        if res = 0  then 
+        if res = 0  then -- Check equality (a - b == 0)
           ack <= '1';
-          next_state <= RESET_STATE;
+          next_state <= IDLE;
+
+        elsif a_lessthan_b = '1' then  -- Check a < b --> a - b == a < 0
+            next_reg_b <=  not res + 1; -- Invert sign to get b - a
         else
-          if res(15) = '1' then 
-            next_state <= SAVE_B;
-            calc_select <= SELECT_B_SUB_A;
-          else
             next_reg_a <= res;
-          end if;  
         end if;
-
-      when SAVE_B => 
-
-      next_state <= SUB_A_B;
-      next_reg_b <= res;
 
       when others => 
         null;
@@ -108,17 +92,13 @@ BEGIN
 END PROCESS CL;
 
 
-res <= (reg_a - reg_b) when calc_select = SELECT_A_SUB_B else 
-       (reg_b - reg_a) when calc_select = SELECT_B_SUB_A;
-
-C <= reg_a;
 -- Registers
 
 seq: PROCESS (clk, reset)
 BEGIN
   if rising_edge(clk) then
     if reset = '1' then 
-      state <= RESET_STATE;
+      state <= IDLE;
       reg_a <= (others => '0');
       reg_b <= (others => '0');
     else 

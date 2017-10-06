@@ -13,9 +13,10 @@ add wave -noupdate -radix decimal /testbench/GCD_module/u2/reg_b
 add wave -noupdate /testbench/GCD_module/u2/next_state
 add wave -noupdate /testbench/GCD_module/u2/state
 add wave -noupdate /testbench/GCD_module/u2/ack
-add wave -noupdate /testbench/GCD_module/u2/calc_select
+add wave -noupdate -radix decimal /testbench/C
+add wave -noupdate -radix decimal /testbench/GCD_module/u2/res
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {111616 ps} 0}
+WaveRestoreCursors {{Cursor 1} {180534 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 285
 configure wave -valuecolwidth 100
@@ -31,4 +32,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {87455 ps} {135777 ps}
+WaveRestoreZoom {0 ps} {1575 ns}

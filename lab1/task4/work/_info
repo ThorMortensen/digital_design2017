@@ -22,9 +22,9 @@ VmLbZ1Uc9cK`4`JMG15;i=0
 !s100 U=<LX63>cW>MMgEXZ;?2c3
 Z7 OV;C;10.5c;63
 32
-Z8 !s110 1507465503
+Z8 !s110 1507473592
 !i10b 1
-Z9 !s108 1507465503.000000
+Z9 !s108 1507473592.000000
 Z10 !s90 -reportprogress|300|-quiet|comp.vhd|
 Z11 !s107 comp.vhd|
 !i113 1
@@ -63,9 +63,9 @@ VNie[zcjkB[T_08ERd8Oh^2
 !s100 >Y:Z`l?lCTkD9EOW[AXVB3
 R7
 32
-Z15 !s110 1507465502
+R8
 !i10b 1
-Z16 !s108 1507465502.000000
+R9
 !s90 -reportprogress|300|-quiet|../task2/debounce_entity.vhd|
 !s107 ../task2/debounce_entity.vhd|
 !i113 1
@@ -84,9 +84,9 @@ V0JHKlWomzl3;0maY9iPE22
 !s100 BiCkPQd5Hm>Yfo[Q=7V1C2
 R7
 32
-R15
+R8
 !i10b 1
-R16
+R9
 !s90 -reportprogress|300|-quiet|../task2/debounce_sim.vhd|
 !s107 ../task2/debounce_sim.vhd|
 !i113 1
@@ -98,19 +98,19 @@ R1
 R2
 R3
 R4
-Z17 8../task1/env.vhd
-Z18 F../task1/env.vhd
+Z15 8../task1/env.vhd
+Z16 F../task1/env.vhd
 l0
 L25
 VX^_VTiengT^hojWG@FKbc0
 !s100 BgL`12aT<l9VgMXFdWobS3
 R7
 32
-R15
+R8
 !i10b 1
-R16
-Z19 !s90 -reportprogress|300|-quiet|../task1/env.vhd|
-Z20 !s107 ../task1/env.vhd|
+R9
+Z17 !s90 -reportprogress|300|-quiet|../task1/env.vhd|
+Z18 !s107 ../task1/env.vhd|
 !i113 1
 R12
 R13
@@ -125,94 +125,94 @@ VZ7_a;jR1eG[o<deRZ9PhO2
 !s100 ?^NXF?_e2dHV=g[G@D1lj2
 R7
 32
-R15
+R8
 !i10b 1
-R16
-R19
-R20
+R9
+R17
+R18
 !i113 1
 R12
 R13
 Efsm
-Z21 w1507465496
+Z19 w1507498811
 R1
 R2
 R3
 R4
-Z22 8gcd_struct.vhd
-Z23 Fgcd_struct.vhd
+Z20 8gcd_struct.vhd
+Z21 Fgcd_struct.vhd
 l0
 L6
-VijM3mEUjANTlBR[[L=3NO0
-!s100 Y_JZ>ZZMXG:BNG?5F=UWM0
+Vo_ac8RXQlGabdPoG<X4cf3
+!s100 =EGk_C0hLTe3Pb62[DbLG3
 R7
 32
-Z24 !s110 1507465531
+Z22 !s110 1507498837
 !i10b 1
-Z25 !s108 1507465531.000000
-Z26 !s90 -reportprogress|300|gcd_struct.vhd|
-Z27 !s107 gcd_struct.vhd|
+Z23 !s108 1507498837.000000
+Z24 !s90 -reportprogress|300|gcd_struct.vhd|
+Z25 !s107 gcd_struct.vhd|
 !i113 1
 R13
 Abehaviour
 R1
 R2
 R3
-Z28 DEx4 work 3 fsm 0 22 ijM3mEUjANTlBR[[L=3NO0
-l24
-L19
-Z29 V0o?MPI[K?56TC8^kF[V_?1
-Z30 !s100 G0P3:_SzTU@=Z<zd0WlV00
+Z26 DEx4 work 3 fsm 0 22 o_ac8RXQlGabdPoG<X4cf3
+l36
+L22
+Z27 VYXzeV:Rz3]AQa@DC=o:852
+Z28 !s100 ZFSH8O:8ADI3LU68EEmkK1
 R7
 32
-R24
+R22
 !i10b 1
+R23
+R24
 R25
-R26
-R27
 !i113 1
 R13
 Egcd
-R21
+R19
 R1
 R2
 R3
 R4
-R22
-R23
+R20
+R21
 l0
-L68
-VhW@_KMbe2TPj?kk>g`06[0
-!s100 F3D_c88bB9=zedJ8H8A:X1
+L138
+V3^M1XoDQO?P@5Ilba=D<81
+!s100 6jA[4Yh>[NOO23B?D;[M_1
 R7
 32
-R24
+R22
 !i10b 1
+R23
+R24
 R25
-R26
-R27
 !i113 1
 R13
 Abehaviour
-R28
+R26
 R14
-Z31 DEx4 work 3 reg 0 22 kNO=fek`lJ5[BDfed_`1U0
-Z32 DEx4 work 3 mux 0 22 IgTUN7>4Aj4gPgJCPIb]f0
+Z29 DEx4 work 3 reg 0 22 kNO=fek`lJ5[BDfed_`1U0
+Z30 DEx4 work 3 mux 0 22 IgTUN7>4Aj4gPgJCPIb]f0
 R1
 R2
 R3
-Z33 DEx4 work 3 gcd 0 22 hW@_KMbe2TPj?kk>g`06[0
-l92
-L77
-Z34 VQUP6Ci3UHG66M76E6ZnJ>1
-Z35 !s100 aYg7A[M9F84FzPP>=bS<N0
+Z31 DEx4 work 3 gcd 0 22 3^M1XoDQO?P@5Ilba=D<81
+l162
+L147
+Z32 V6l8eWSzI9bDdoVGdz]RTY0
+Z33 !s100 z;ig7RlGmbe6:JV6Fa6J00
 R7
 32
-R24
+R22
 !i10b 1
+R23
+R24
 R25
-R26
-R27
 !i113 1
 R13
 Egcd_sys
@@ -221,19 +221,19 @@ R1
 R2
 R3
 R4
-Z36 8../task2/gcd_top.vhd
-Z37 F../task2/gcd_top.vhd
+Z34 8../task2/gcd_top.vhd
+Z35 F../task2/gcd_top.vhd
 l0
 L17
 Vd<AKJ;h<Q:W2XLR2n0?3^0
 !s100 M_kb`zK2dMdL[zJP6:>C30
 R7
 32
-R15
+R8
 !i10b 1
-R16
-Z38 !s90 -reportprogress|300|-quiet|../task2/gcd_top.vhd|
-Z39 !s107 ../task2/gcd_top.vhd|
+R9
+Z36 !s90 -reportprogress|300|-quiet|../task2/gcd_top.vhd|
+Z37 !s107 ../task2/gcd_top.vhd|
 !i113 1
 R12
 R13
@@ -248,11 +248,11 @@ VIgFQH=C8zHa8=]zW?1kI93
 !s100 lhVgOaJ>fd=<KP<lbWf6:2
 R7
 32
-R15
+R8
 !i10b 1
-R16
-R38
-R39
+R9
+R36
+R37
 !i113 1
 R12
 R13
@@ -282,7 +282,7 @@ Abehaviour
 R1
 R2
 R3
-R32
+R30
 l60
 L59
 VSeNVcl2:b@JFT_7fz4RlD1
@@ -323,7 +323,7 @@ Abehaviour
 R1
 R2
 R3
-R31
+R29
 l82
 L81
 V[b9YNljmEC1AGGBh`@FmH1
@@ -344,8 +344,8 @@ R1
 R2
 R3
 R4
-Z40 8../task1/test.vhd
-Z41 F../task1/test.vhd
+Z38 8../task1/test.vhd
+Z39 F../task1/test.vhd
 l0
 L27
 VFIZ[EcEVCl^NfZeQ9IYcU2
@@ -354,9 +354,9 @@ R7
 32
 R8
 !i10b 1
-R16
-Z42 !s90 -reportprogress|300|-quiet|../task1/test.vhd|
-Z43 !s107 ../task1/test.vhd|
+R9
+Z40 !s90 -reportprogress|300|-quiet|../task1/test.vhd|
+Z41 !s107 ../task1/test.vhd|
 !i113 1
 R12
 R13
@@ -373,9 +373,9 @@ R7
 32
 R8
 !i10b 1
-R16
-R42
-R43
+R9
+R40
+R41
 !i113 1
 R12
 R13

@@ -13,25 +13,97 @@ ENTITY FSM IS
           ABorALU   : out std_logic;  
           LDA       : out std_logic;  
           LDB       : out std_logic;  
-          alu_Z     : out std_logic;  
-          alu_N     : out std_logic;
+          alu_Z     : in std_logic;  
+          alu_N     : in std_logic;
           alu_FN    : out std_logic_vector(1 downto 0));  
 END FSM;
 
 
 ARCHITECTURE behaviour OF FSM IS
 
-TYPE state_type IS (IDLE, SETUP, LOAD_A, ACK_STATE, LOAD_B, CALC); -- Input your own state names
+TYPE state_type IS (IDLE, LOAD_A, LOAD_B, CALC_A, CALC_B, RESULT, SAVE_A, SAVE_B, SEATLE); -- Input your own state names
 
 signal state    : state_type := IDLE;
 signal next_state    : state_type := IDLE;
 
+constant SUB_A_B  : std_logic_vector := "00"; 
+constant SUB_B_A  : std_logic_vector := "01"; 
+constant PASS_A   : std_logic_vector := "10"; 
+constant PASS_B   : std_logic_vector := "11"; 
+
+
+
 BEGIN
 
 
-CL : process(state, req, alu_Z, alu_N)
+CL : process(state, req ,alu_Z, alu_N) --(state, req ,alu_Z, alu_N
 begin
+  next_state  <= state;
+  ack         <= '0';
+  ABorALU     <= '0';
+  LDA         <= '0';
+  LDB         <= '0';
+  alu_FN      <= PASS_A;
 
+   case (state) IS
+      when IDLE => 
+
+        if req = '1' then 
+          next_state <= LOAD_A;
+          LDA <= '1';
+          ack <= '1';
+          ABorALU <= '1';
+        end if;
+
+      when LOAD_A =>
+        --LDA <= '1';
+        ABorALU <= '1';
+
+        if req = '1' then
+          --ack <= '0';
+          next_state <= LOAD_B;
+
+        end if;
+
+      when LOAD_B =>
+        LDB <= '1';
+
+
+        ABorALU <=  '1' ;
+
+        --next_reg_b <= AB;
+        next_state <= CALC_A;
+
+
+      when CALC_A => 
+        alu_FN  <= SUB_A_B;
+
+        
+        if alu_Z = '1'  then -- Check equality (a - b == 0)
+          next_state <= RESULT;
+
+        elsif alu_N = '1' then  -- Check a < b --> a - b == a < 0
+          next_state <= CALC_B;
+        else
+          LDA <= '1';
+        end if;
+
+      when CALC_B =>
+
+          LDB <= '1';
+          alu_FN <= SUB_B_A;
+          next_state <= CALC_A;
+
+
+      when RESULT =>
+        ack     <= '1';
+        next_state <= IDLE;
+
+
+
+      when others => 
+        null;
+   end case;
 
 end process CL;
 
@@ -47,12 +119,6 @@ begin
     end if;
   end if;
 end process state_reg;
-
-
-
-
-
-
 
 
 
@@ -95,6 +161,7 @@ ARCHITECTURE behaviour OF gcd IS
 
 BEGIN
 
+C <= C_intl;
 
 inst_mux : entity work.mux                       
     generic map (N  => DATA_WIDTH)      -- Width of inputs and output.
@@ -136,15 +203,18 @@ inst_alu : entity work.alu
 
 inst_fsm : entity work.FSM 
     port map (
-      clk       =>  clk,         -- The clock signal.
-      reset     =>  reset,         -- RESET the module.
-      ------------------------------------------------------------------------
-      ABorALU   =>  ABorALU,
-      LDA       =>  LDA,
-      LDB       =>  LDB,
-      alu_FN    =>  alu_FN,
-      alu_Z     =>  alu_Z,
-      alu_N     =>  alu_N
+      clk       => clk,         -- The clock signal.
+      reset     => reset,         -- RESET the module.
+     ----------------------------------------------------------------------
+      req       => req,
+      ack       => ack,
+     ------------------------------------------------------------------------
+      ABorALU   => ABorALU,
+      LDA       => LDA,
+      LDB       => LDB,
+      alu_FN    => alu_FN,
+      alu_Z     => alu_Z,
+      alu_N     => alu_N
     );    
 
 

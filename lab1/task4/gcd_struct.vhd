@@ -7,19 +7,22 @@ ENTITY FSM IS
     PORT (clk       : in std_logic;           -- The clock signal.
           reset     : in std_logic;           -- RESET the module.
           ------------------------------------------------------------------------
-          ABorALU  : out std_logic;  
-          LDA      : out std_logic;  
-          LDB      : out std_logic;  
-          FN       : out std_logic;  
-          Z        : out std_logic;  
-          N        : out std_logic(1 downto 0));  
+          ABorALU   : out std_logic;  
+          LDA       : out std_logic;  
+          LDB       : out std_logic;  
+          alu_FN        : out std_logic;  
+          alu_Z         : out std_logic;  
+          alu_N         : out std_logic(1 downto 0));  
 END FSM;
 
 
-TYPE state_type IS (IDLE, LOAD_A, LOAD_B, CALC); -- Input your own state names
 
-SIGNAL reg_a,next_reg_a,next_reg_b,reg_b : unsigned(15 downto 0) := (others => '0');
-SIGNAL state, next_state : state_type := IDLE;
+--ARCHITECTURE behaviour OF FSM IS
+
+--TYPE state_type IS (IDLE, LOAD_A, LOAD_B, CALC); -- Input your own state names
+
+--SIGNAL reg_a,next_reg_a,next_reg_b,reg_b : unsigned(15 downto 0) := (others => '0');
+--SIGNAL state, next_state : state_type := IDLE;
 
 BEGIN
 
@@ -33,20 +36,16 @@ end process;
 
 
 
-state_reg: process(clk)
-begin
-  if rising_edge(clk) then 
-    if reset = '1' then
-      state <= IDLE;
-    else 
-      state <= next_state;
-    end if;
-  end if;
-end process state_reg;
-
-
-
-ARCHITECTURE behaviour OF FSM IS
+--state_reg: process(clk)
+--begin
+--  if rising_edge(clk) then 
+--    if reset = '1' then
+--      state <= IDLE;
+--    else 
+--      state <= next_state;
+--    end if;
+--  end if;
+--end process state_reg;
 
 
 
@@ -58,22 +57,25 @@ ARCHITECTURE behaviour OF FSM IS
 
 END behaviour;
 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
 
-ENTITY data_path IS
-    PORT (clk:   IN std_logic;           -- The clock signal.
-          reset: IN std_logic;           -- RESET the module.
-          req:   IN std_logic;           -- Input operand / Start computation.
-          AB:    IN unsigned(15 downto 0);  -- The two operands.
-          ack:   OUT std_logic;          -- Computation is complete.
-          C:     OUT unsigned(15 downto 0));  -- The result.
-END data_path;
 
-ARCHITECTURE behaviour OF data_path IS
-
-
+-- Data path 
 ENTITY gcd IS
     PORT (clk:   IN std_logic;           -- The clock signal.
           reset: IN std_logic;           -- RESET the module.
@@ -86,27 +88,51 @@ END gcd;
 
 
 
-    COMPONENT gcd
-        PORT (clk   : IN std_logic;       -- The clock signal.
-              reset : IN std_logic;           -- Reset the module.
-              req   : IN std_logic;       -- Input operand / Start computation.
-              AB    : IN unsigned(15 downto 0); -- Bus for A and B operands.
-              ack   : OUT std_logic;        -- Input received / Computation is complete.
-              C   : OUT unsigned(15 downto 0)     -- The result.
-             );
-    END COMPONENT;
+
+ARCHITECTURE behaviour OF gcd IS
+
+
+--ENTITY gcd IS
+--    PORT (clk:   IN std_logic;           -- The clock signal.
+--          reset: IN std_logic;           -- RESET the module.
+--          req:   IN std_logic;           -- Input operand / Start computation.
+--          AB:    IN unsigned(15 downto 0);  -- The two operands.
+--          ack:   OUT std_logic;          -- Computation is complete.
+--          C:     OUT unsigned(15 downto 0));  -- The result.
+--END gcd;
+
+
+
+    --COMPONENT GCD_sys
+    --   PORT (clk:         IN std_logic;         -- The clock signal.
+    --         reset:       IN std_logic;         -- Reset the module.
+    --         req:         IN std_logic;         -- Start computation.
+    --         AB:          IN unsigned(15 downto 0);   -- The two operands.
+    --         ack:         OUT std_logic;        -- Computation is complete.
+    --         C:           OUT unsigned(15 downto 0)); -- The result.
+    --END COMPONENT;
+
+    --COMPONENT gcd
+    --    PORT (clk   : IN std_logic;       -- The clock signal.
+    --          reset : IN std_logic;           -- Reset the module.
+    --          req   : IN std_logic;       -- Input operand / Start computation.
+    --          AB    : IN unsigned(15 downto 0); -- Bus for A and B operands.
+    --          ack   : OUT std_logic;        -- Input received / Computation is complete.
+    --          C     : OUT unsigned(15 downto 0)     -- The result.
+    --         );
+    --END COMPONENT;
 
 
 
 BEGIN
 
 
-FSM_inst : entity work.FSM port map(
-   a => a,
-   b => b,
-   sum => s1,
-   carry => c1
-   );
+--FSM_inst : entity work.FSM port map(
+--   a => a,
+--   b => b,
+--   sum => s1,
+--   carry => c1
+--   );
 
 
 END behaviour;

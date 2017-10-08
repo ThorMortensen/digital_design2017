@@ -1,53 +1,266 @@
 do task4.do
-# ** Error: (vcom-7) Failed to open design unit file "debounce_entity.vhd" in read mode.
-# No such file or directory. (errno = ENOENT)
-# ** Error: /home/thm/intelFPGA/16.1/modelsim_ase/linuxaloem/vcom failed.
-# Error in macro ./task4.do line 28
-# /home/thm/intelFPGA/16.1/modelsim_ase/linuxaloem/vcom failed.
-#     while executing
-# "vcom -quiet debounce_entity.vhd"
-do task4.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # ** Error: gcd_struct.vhd(15): Index constraint cannot be applied to non-array type ieee.std_logic_1164.STD_LOGIC.
 # ** Error: gcd_struct.vhd(16): VHDL Compiler exiting
-# ** Error: /home/thm/intelFPGA/16.1/modelsim_ase/linuxaloem/vcom failed.
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
 # Error in macro ./task4.do line 33
-# /home/thm/intelFPGA/16.1/modelsim_ase/linuxaloem/vcom failed.
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
 #     while executing
 # "vcom -quiet gcd_struct.vhd"
 do task4.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # ** Error: gcd_struct.vhd(15): Index constraint cannot be applied to non-array type ieee.std_logic_1164.STD_LOGIC.
 # ** Error: gcd_struct.vhd(16): VHDL Compiler exiting
-# ** Error: /home/thm/intelFPGA/16.1/modelsim_ase/linuxaloem/vcom failed.
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
 # Error in macro ./task4.do line 33
-# /home/thm/intelFPGA/16.1/modelsim_ase/linuxaloem/vcom failed.
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
 #     while executing
 # "vcom -quiet gcd_struct.vhd"
 do task4.do
 # ** Warning: (vlib-34) Library already exists at "work".
-# ** Error: gcd_struct.vhd(15): Index constraint cannot be applied to non-array type ieee.std_logic_1164.STD_LOGIC.
-# ** Error: gcd_struct.vhd(16): VHDL Compiler exiting
-# ** Error: /home/thm/intelFPGA/16.1/modelsim_ase/linuxaloem/vcom failed.
+# ** Error: gcd_struct.vhd(30): (vcom-1136) Unknown identifier "state".
+# ** Error: gcd_struct.vhd(30): Expression is not a signal.
+# ** Error: gcd_struct.vhd(30): (vcom-1136) Unknown identifier "req".
+# ** Error: gcd_struct.vhd(30): Expression is not a signal.
+# ** Error: gcd_struct.vhd(30): (vcom-1136) Unknown identifier "n".
+# ** Error: gcd_struct.vhd(30): Expression is not a signal.
+# ** Error: gcd_struct.vhd(30): (vcom-1136) Unknown identifier "z".
+# ** Error: gcd_struct.vhd(30): Expression is not a signal.
+# ** Error: gcd_struct.vhd(58): VHDL Compiler exiting
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
 # Error in macro ./task4.do line 33
-# /home/thm/intelFPGA/16.1/modelsim_ase/linuxaloem/vcom failed.
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -quiet gcd_struct.vhd"
+ls
+# comp.vhd
+# gcd_struct.vhd
+# task4.do
+# transcript
+# work
+do task4.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# vsim -do "sim.do" -novopt testbench 
+# Start time: 12:28:46 on Oct 08,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(structure)
+# Loading work.env(behaviour)
+# Loading work.gcd_sys(fsmd_io)
+# Loading work.debounce(sim_behav)
+# Loading work.gcd(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/ack has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/C(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
+# sim.do
+# invalid command name "sim.do"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 12:47:37 on Oct 08,2017
+# vcom -reportprogress 300 gcd_struct.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity FSM
+# -- Compiling architecture behaviour of FSM
+# -- Compiling entity gcd
+# -- Compiling architecture behaviour of gcd
+# ** Error: gcd_struct.vhd(134): (vcom-1294) Declaration with designator "C" already exists in this region.
+# ** =====> Prior declaration of "C" is at gcd_struct.vhd(85).
+# ** Error: (vcom-11) Could not find work.mux.
+# ** Error (suppressible): gcd_struct.vhd(139): (vcom-1195) Cannot find expanded name "work.mux".
+# ** Error: gcd_struct.vhd(140): near "=>": (vcom-1576) expecting '['.
+# ** Error: gcd_struct.vhd(198): VHDL Compiler exiting
+# End time: 12:47:37 on Oct 08,2017, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 0
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd_struct.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 12:47:57 on Oct 08,2017
+# vcom -reportprogress 300 gcd_struct.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity FSM
+# -- Compiling architecture behaviour of FSM
+# -- Compiling entity gcd
+# -- Compiling architecture behaviour of gcd
+# ** Error: gcd_struct.vhd(134): (vcom-1294) Declaration with designator "C" already exists in this region.
+# ** =====> Prior declaration of "C" is at gcd_struct.vhd(85).
+# ** Error: (vcom-11) Could not find work.mux.
+# ** Error (suppressible): gcd_struct.vhd(139): (vcom-1195) Cannot find expanded name "work.mux".
+# ** Error: gcd_struct.vhd(140): near "=>": (vcom-1576) expecting '['.
+# ** Error: gcd_struct.vhd(198): VHDL Compiler exiting
+# End time: 12:47:57 on Oct 08,2017, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 0
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd_struct.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 12:49:10 on Oct 08,2017
+# vcom -reportprogress 300 gcd_struct.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity FSM
+# -- Compiling architecture behaviour of FSM
+# -- Compiling entity gcd
+# -- Compiling architecture behaviour of gcd
+# ** Error: (vcom-11) Could not find work.mux.
+# ** Error (suppressible): gcd_struct.vhd(139): (vcom-1195) Cannot find expanded name "work.mux".
+# ** Error: gcd_struct.vhd(140): near "=>": (vcom-1576) expecting '['.
+# ** Error: gcd_struct.vhd(198): VHDL Compiler exiting
+# End time: 12:49:10 on Oct 08,2017, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd_struct.vhd"
+do task4.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd_struct.vhd(140): near "=>": (vcom-1576) expecting '['.
+# ** Error: gcd_struct.vhd(198): VHDL Compiler exiting
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task4.do line 34
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
 #     while executing
 # "vcom -quiet gcd_struct.vhd"
 do task4.do
 # ** Warning: (vlib-34) Library already exists at "work".
-# ** Error: gcd_struct.vhd(15): Index constraint cannot be applied to non-array type ieee.std_logic_1164.STD_LOGIC.
-# ** Error: gcd_struct.vhd(16): VHDL Compiler exiting
-# ** Error: /home/thm/intelFPGA/16.1/modelsim_ase/linuxaloem/vcom failed.
-# Error in macro ./task4.do line 33
-# /home/thm/intelFPGA/16.1/modelsim_ase/linuxaloem/vcom failed.
+# ** Error: gcd_struct.vhd(142): Signal "Y" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: gcd_struct.vhd(145): Signal "C_intl" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: gcd_struct.vhd(198): VHDL Compiler exiting
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task4.do line 34
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
 #     while executing
 # "vcom -quiet gcd_struct.vhd"
 do task4.do
 # ** Warning: (vlib-34) Library already exists at "work".
-# ** Error: gcd_struct.vhd(15): Index constraint cannot be applied to non-array type ieee.std_logic_1164.STD_LOGIC.
-# ** Error: gcd_struct.vhd(16): VHDL Compiler exiting
-# ** Error: /home/thm/intelFPGA/16.1/modelsim_ase/linuxaloem/vcom failed.
-# Error in macro ./task4.do line 33
-# /home/thm/intelFPGA/16.1/modelsim_ase/linuxaloem/vcom failed.
+# End time: 12:51:33 on Oct 08,2017, Elapsed time: 0:22:47
+# Errors: 32, Warnings: 2
+# vsim -do "sim.do" -novopt testbench 
+# Start time: 12:51:33 on Oct 08,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(structure)
+# Loading work.env(behaviour)
+# Loading work.gcd_sys(fsmd_io)
+# Loading work.debounce(sim_behav)
+# Loading work.gcd(behaviour)
+# Loading work.mux(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/ack has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/C(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
+# sim.do
+# invalid command name "sim.do"
+do task4.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: gcd_struct.vhd(130): Signal "alu_FN" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: gcd_struct.vhd(133): Signal "alu_N" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.std_logic_1164.STD_LOGIC.
+# ** Error: gcd_struct.vhd(150): VHDL Compiler exiting
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./task4.do line 34
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
 #     while executing
 # "vcom -quiet gcd_struct.vhd"
+do task4.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# End time: 14:02:11 on Oct 08,2017, Elapsed time: 1:10:38
+# Errors: 7, Warnings: 2
+# vsim -do "sim.do" -novopt testbench 
+# Start time: 14:02:11 on Oct 08,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(structure)
+# Loading work.env(behaviour)
+# Loading work.gcd_sys(fsmd_io)
+# Loading work.debounce(sim_behav)
+# Loading work.gcd(behaviour)
+# Loading work.mux(behaviour)
+# Loading work.reg(behaviour)
+# ** Fatal: (vsim-3348) Port length (8) does not match actual length (16) for port "/testbench/GCD_module/u2/inst_regA/data_in".
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/GCD_module/u2/inst_regA File: comp.vhd Line: 77
+# FATAL ERROR while loading design
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./task4.do PAUSED at line 45
+sim.do
+# invalid command name "sim.do"
+do task4.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# vsim -do "sim.do" -novopt testbench 
+# Start time: 14:02:11 on Oct 08,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(structure)
+# Loading work.env(behaviour)
+# Loading work.gcd_sys(fsmd_io)
+# Loading work.debounce(sim_behav)
+# Loading work.gcd(behaviour)
+# Loading work.mux(behaviour)
+# Loading work.reg(behaviour)
+# ** Fatal: (vsim-3348) Port length (8) does not match actual length (16) for port "/testbench/GCD_module/u2/inst_regA/data_in".
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/GCD_module/u2/inst_regA File: comp.vhd Line: 77
+# FATAL ERROR while loading design
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./task4.do PAUSED at line 45
+do task4.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# vsim -do "sim.do" -novopt testbench 
+# Start time: 14:02:11 on Oct 08,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(structure)
+# Loading work.env(behaviour)
+# Loading work.gcd_sys(fsmd_io)
+# Loading work.debounce(sim_behav)
+# Loading work.gcd(behaviour)
+# Loading work.mux(behaviour)
+# Loading work.reg(behaviour)
+# Loading work.alu(behaviour)
+# Loading work.fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/inst_fsm/ABorALU has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/inst_fsm/LDA has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/inst_fsm/LDB has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/inst_fsm/alu_Z has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/inst_fsm/alu_N has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/inst_fsm/alu_FN(1 downto 0) has no driver.
+# This port will contribute value (UU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/ack has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/C(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
+# sim.do
+# invalid command name "sim.do"

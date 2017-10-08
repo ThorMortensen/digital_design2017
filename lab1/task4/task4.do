@@ -30,6 +30,7 @@ vcom -quiet ../task2/debounce_sim.vhd
 vcom -quiet ../task2/gcd_top.vhd
 vcom -quiet ../task1/env.vhd
 vcom -quiet ../task1/test.vhd
+vcom -quiet comp.vhd
 vcom -quiet gcd_struct.vhd
 
 

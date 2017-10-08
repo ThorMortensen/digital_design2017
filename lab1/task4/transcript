@@ -264,3 +264,101 @@ do task4.do
 # This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
 # sim.do
 # invalid command name "sim.do"
+do task4.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# End time: 14:25:03 on Oct 08,2017, Elapsed time: 0:22:52
+# Errors: 3, Warnings: 8
+# vsim -do "sim.do" -novopt testbench 
+# Start time: 14:25:03 on Oct 08,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(structure)
+# Loading work.env(behaviour)
+# Loading work.gcd_sys(fsmd_io)
+# Loading work.debounce(sim_behav)
+# Loading work.gcd(behaviour)
+# Loading work.mux(behaviour)
+# Loading work.reg(behaviour)
+# Loading work.alu(behaviour)
+# Loading work.fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/inst_fsm/ABorALU has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/inst_fsm/LDA has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/inst_fsm/LDB has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/inst_fsm/alu_Z has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/inst_fsm/alu_N has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/inst_fsm/alu_FN(1 downto 0) has no driver.
+# This port will contribute value (UU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/ack has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/C(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
+# sim.do
+# invalid command name "sim.do"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 14:25:09 on Oct 08,2017
+# vcom -reportprogress 300 gcd_struct.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity FSM
+# -- Compiling architecture behaviour of FSM
+# -- Compiling entity gcd
+# -- Compiling architecture behaviour of gcd
+# -- Loading entity mux
+# -- Loading entity reg
+# -- Loading entity alu
+# -- Loading entity FSM
+# End time: 14:25:10 on Oct 08,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 14:25:31 on Oct 08,2017
+# vcom -reportprogress 300 gcd_struct.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity FSM
+# -- Compiling architecture behaviour of FSM
+# -- Compiling entity gcd
+# -- Compiling architecture behaviour of gcd
+# -- Loading entity mux
+# -- Loading entity reg
+# -- Loading entity alu
+# -- Loading entity FSM
+# End time: 14:25:31 on Oct 08,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(behaviour)
+# Loading work.fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/inst_fsm/ABorALU has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/inst_fsm/LDA has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/inst_fsm/LDB has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/inst_fsm/alu_Z has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/inst_fsm/alu_N has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/inst_fsm/alu_FN(1 downto 0) has no driver.
+# This port will contribute value (UU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/ack has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/GCD_module/u2/C(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/GCD_module/u2/inst_alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 130 ns  Iteration: 2  Instance: /testbench/environment
+# ** Failure: Wrong result!
+#    Time: 130 ns  Iteration: 2  Process: /testbench/environment/line__62 File: ../task1/env.vhd
+# Break in Process line__62 at ../task1/env.vhd line 109

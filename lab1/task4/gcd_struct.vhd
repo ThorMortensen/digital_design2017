@@ -6,6 +6,9 @@ USE IEEE.numeric_std.ALL;
 ENTITY FSM IS
     PORT (clk       : in std_logic;           -- The clock signal.
           reset     : in std_logic;           -- RESET the module.
+          ----------------------------------------------------------------------
+          req       : in std_logic;
+          ack       : out std_logic;
           ------------------------------------------------------------------------
           ABorALU   : out std_logic;  
           LDA       : out std_logic;  
@@ -16,36 +19,34 @@ ENTITY FSM IS
 END FSM;
 
 
-
 ARCHITECTURE behaviour OF FSM IS
 
---TYPE state_type IS (IDLE, LOAD_A, LOAD_B, CALC); -- Input your own state names
+TYPE state_type IS (IDLE, SETUP, LOAD_A, ACK_STATE, LOAD_B, CALC); -- Input your own state names
 
---SIGNAL reg_a,next_reg_a,next_reg_b,reg_b : unsigned(15 downto 0) := (others => '0');
---SIGNAL state, next_state : state_type := IDLE;
+signal state    : state_type := IDLE;
+signal next_state    : state_type := IDLE;
 
 BEGIN
 
 
---process(state, req, n, z)
-
---begin
-
-
---end process;
+CL : process(state, req, alu_Z, alu_N)
+begin
 
 
+end process CL;
 
---state_reg: process(clk)
---begin
---  if rising_edge(clk) then 
---    if reset = '1' then
---      state <= IDLE;
---    else 
---      state <= next_state;
---    end if;
---  end if;
---end process state_reg;
+
+
+state_reg: process(clk)
+begin
+  if rising_edge(clk) then 
+    if reset = '1' then
+      state <= IDLE;
+    else 
+      state <= next_state;
+    end if;
+  end if;
+end process state_reg;
 
 
 

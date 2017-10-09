@@ -21,7 +21,7 @@ END FSM;
 
 ARCHITECTURE behaviour OF FSM IS
 
-TYPE state_type IS (IDLE, LOAD_A, LOAD_B, CALC_A, CALC_B, RESULT, SAVE_A, SAVE_B, SEATLE); -- Input your own state names
+TYPE state_type IS (IDLE, LOAD_A, LOAD_B, CALC_A, CALC_B, RESULT); 
 
 signal state    : state_type := IDLE;
 signal next_state    : state_type := IDLE;
@@ -31,12 +31,9 @@ constant SUB_B_A  : std_logic_vector := "01";
 constant PASS_A   : std_logic_vector := "10"; 
 constant PASS_B   : std_logic_vector := "11"; 
 
-
-
 BEGIN
 
-
-CL : process(state, req ,alu_Z, alu_N) --(state, req ,alu_Z, alu_N
+CL : process(state, req ,alu_Z, alu_N) 
 begin
   next_state  <= state;
   ack         <= '0';
@@ -47,66 +44,41 @@ begin
 
    case (state) IS
       when IDLE => 
-
         if req = '1' then 
           next_state <= LOAD_A;
           LDA <= '1';
           ack <= '1';
           ABorALU <= '1';
         end if;
-
       when LOAD_A =>
-        --LDA <= '1';
         ABorALU <= '1';
-
         if req = '1' then
-          --ack <= '0';
           next_state <= LOAD_B;
-
         end if;
-
       when LOAD_B =>
         LDB <= '1';
-
-
         ABorALU <=  '1' ;
-
-        --next_reg_b <= AB;
         next_state <= CALC_A;
-
-
       when CALC_A => 
         alu_FN  <= SUB_A_B;
-
-        
-        if alu_Z = '1'  then -- Check equality (a - b == 0)
+        if alu_Z = '1'  then 
           next_state <= RESULT;
-
-        elsif alu_N = '1' then  -- Check a < b --> a - b == a < 0
+        elsif alu_N = '1' then 
           next_state <= CALC_B;
         else
           LDA <= '1';
         end if;
-
       when CALC_B =>
-
-          LDB <= '1';
-          alu_FN <= SUB_B_A;
-          next_state <= CALC_A;
-
-
+        LDB <= '1';
+        alu_FN <= SUB_B_A;
+        next_state <= CALC_A;
       when RESULT =>
         ack     <= '1';
         next_state <= IDLE;
-
-
-
       when others => 
         null;
    end case;
-
 end process CL;
-
 
 
 state_reg: process(clk)
@@ -119,7 +91,6 @@ begin
     end if;
   end if;
 end process state_reg;
-
 
 
 END behaviour;

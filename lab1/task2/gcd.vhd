@@ -48,43 +48,34 @@ res <= (reg_a - reg_b);
 -- Combinatorial logic
 CL: PROCESS (req,AB,state,reg_a,reg_b, res)
 BEGIN
-  next_state <= next_state;
+  next_state <= state;
   ack <= '0';
   next_reg_a <= reg_a;
   next_reg_b <= reg_b;
 
    CASE (state) IS
       when IDLE => 
-
         if req = '1' then 
           next_state <= LOAD_A;
           ack <= '1';
           next_reg_a <= AB;
         end if;
-
       when LOAD_A =>
-
         if req = '1' then
           next_state <= LOAD_B;
         end if;
-
       when LOAD_B =>
-
         next_reg_b <= AB;
         next_state <= CALC;
-
       when CALC => 
-        
         if res = 0  then -- Check equality (a - b == 0)
           ack <= '1';
           next_state <= IDLE;
-
         elsif a_lessthan_b = '1' then  -- Check a < b --> a - b == a < 0
             next_reg_b <=  not res + 1; -- Invert sign to get b - a
         else
             next_reg_a <= res;
         end if;
-
       when others => 
         null;
 

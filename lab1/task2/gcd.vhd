@@ -28,21 +28,32 @@ ARCHITECTURE FSMD OF gcd IS
 
 TYPE state_type IS (IDLE, LOAD_A, LOAD_B, CALC); -- Input your own state names
 
-SIGNAL reg_a,next_reg_a,next_reg_b,reg_b : unsigned(15 downto 0) := (others => '0');
-SIGNAL state, next_state : state_type := IDLE;
+signal reg_a,next_reg_a,next_reg_b,reg_b : unsigned(15 downto 0) := (others => '0');
+signal state, next_state : state_type := IDLE;
 
 signal res : unsigned(15 downto 0) := (others => '0');
 alias a_lessthan_b : std_logic is res(15); 
 
+signal swap_a_b : std_logic;--(0 downto 0);
+signal src0     : unsigned(16 downto 0);
+signal src1     : unsigned(16 downto 0);
+signal sum     : unsigned(16 downto 0);
+
+
 
 BEGIN
 
--- Outputs
-C <= reg_a; 
 
 -- Sequential logic
 
-res <= (reg_a - reg_b); 
+--src0 <= reg_a & '1';
+--src1 <= (reg_b xor (15 downto 0 => swap_a_b)) & swap_a_b;--(others => swap_a_b);
+
+sum <= ((reg_a & '1') - ((reg_b xor (15 downto 0 => swap_a_b)) & swap_a_b));
+res <= sum(16 downto 1); 
+-- Sequential logic
+
+--res <= (reg_a - reg_b); 
 
 
 -- Combinatorial logic
@@ -52,6 +63,7 @@ BEGIN
   ack <= '0';
   next_reg_a <= reg_a;
   next_reg_b <= reg_b;
+  swap_a_b <= '0';
 
    CASE (state) IS
       when IDLE => 
@@ -72,6 +84,7 @@ BEGIN
           ack <= '1';
           next_state <= IDLE;
         elsif a_lessthan_b = '1' then  -- Check a < b --> a - b == a < 0
+            swap_a_b <= '1';
             next_reg_b <=  not res + 1; -- Invert sign to get b - a
         else
             next_reg_a <= res;
@@ -100,6 +113,7 @@ BEGIN
   end if; 
 END PROCESS seq;
 
-
+-- Outputs
+C <= reg_a; 
 
 END FSMD;

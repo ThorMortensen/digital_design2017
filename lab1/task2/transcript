@@ -54,3 +54,447 @@ do resrun.do
 # ** Failure: Test passed
 #    Time: 2530 ns  Iteration: 5  Process: /testbench/environment/line__62 File: ../task1/env.vhd
 # Break in Process line__62 at ../task1/env.vhd line 117
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 02:55:00 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Error: gcd.vhd(37): (vcom-1360) Array type of "swap_a_b" does not have an index constraint.
+# ** Error: gcd.vhd(49): near ";": (vcom-1576) expecting ')'.
+# ** Error: gcd.vhd(115): VHDL Compiler exiting
+# End time: 02:55:00 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 02:55:23 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Error: gcd.vhd(37): (vcom-1360) Array type of "swap_a_b" does not have an index constraint.
+# ** Error: gcd.vhd(37): Integer literal 0 is not of type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: gcd.vhd(49): near ";": (vcom-1576) expecting ')'.
+# ** Error: gcd.vhd(115): VHDL Compiler exiting
+# End time: 02:55:23 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 02:55:43 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Error: gcd.vhd(37): (vcom-1360) Array type of "swap_a_b" does not have an index constraint.
+# ** Error: gcd.vhd(37): Enumeration literal '0' is not of type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: gcd.vhd(49): near ";": (vcom-1576) expecting ')'.
+# ** Error: gcd.vhd(115): VHDL Compiler exiting
+# End time: 02:55:43 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 02:56:13 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Warning: gcd.vhd(46): (vcom-1275) Arguments of overloaded "xor" operator are not the same length (16 vs. 1).
+# ** Error: gcd.vhd(49): near ";": (vcom-1576) expecting ')'.
+# ** Error (suppressible): gcd.vhd(46): (vcom-1272) Length of expected is 17; length of actual is 16.
+# ** Error: gcd.vhd(115): VHDL Compiler exiting
+# End time: 02:56:13 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 1
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 02:57:06 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Error: gcd.vhd(34): Object alias must refer to a variable, signal, constant, or file.
+# ** Error: gcd.vhd(34): (vcom-1136) Unknown identifier "res".
+# ** Warning: gcd.vhd(48): (vcom-1275) Arguments of overloaded "xor" operator are not the same length (16 vs. 1).
+# ** Error: gcd.vhd(51): near "(": (vcom-1576) expecting ')'.
+# ** Error: gcd.vhd(85): (vcom-1136) Unknown identifier "a_lessthan_b".
+# ** Error: gcd.vhd(85): Type error resolving infix expression "=" as type std.STANDARD.BOOLEAN.
+# ** Error (suppressible): gcd.vhd(48): (vcom-1272) Length of expected is 17; length of actual is 16.
+# ** Error: gcd.vhd(117): VHDL Compiler exiting
+# End time: 02:57:06 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 7, Warnings: 1
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 02:57:29 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Warning: gcd.vhd(48): (vcom-1275) Arguments of overloaded "xor" operator are not the same length (16 vs. 1).
+# ** Error: gcd.vhd(51): near "(": (vcom-1576) expecting ')'.
+# ** Error (suppressible): gcd.vhd(48): (vcom-1272) Length of expected is 17; length of actual is 16.
+# ** Error: gcd.vhd(117): VHDL Compiler exiting
+# End time: 02:57:29 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 1
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 02:58:46 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Warning: gcd.vhd(49): (vcom-1275) Arguments of overloaded "xor" operator are not the same length (16 vs. 1).
+# ** Error: gcd.vhd(52): near ";": (vcom-1576) expecting ')'.
+# ** Error (suppressible): gcd.vhd(49): (vcom-1272) Length of expected is 17; length of actual is 16.
+# ** Error: gcd.vhd(118): VHDL Compiler exiting
+# End time: 02:58:46 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 1
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 02:58:54 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Warning: gcd.vhd(49): (vcom-1275) Arguments of overloaded "xor" operator are not the same length (16 vs. 1).
+# ** Error: gcd.vhd(52): near ";": (vcom-1576) expecting ')'.
+# ** Error (suppressible): gcd.vhd(49): (vcom-1272) Length of expected is 17; length of actual is 16.
+# ** Error: gcd.vhd(118): VHDL Compiler exiting
+# End time: 02:58:54 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 1
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 03:00:01 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Error: gcd.vhd(49): Signal "swap_a_b" is type ieee.NUMERIC_STD.UNSIGNED; expecting type ieee.std_logic_1164.STD_ULOGIC.
+# ** Error: gcd.vhd(49): (vcom-1389) OTHERS aggregate cannot be operand of operator with unconstrained array formal.
+# ** Error: gcd.vhd(52): near ";": (vcom-1576) expecting ')'.
+# ** Error: gcd.vhd(118): VHDL Compiler exiting
+# End time: 03:00:01 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 03:00:49 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Warning: gcd.vhd(49): (vcom-1275) Arguments of overloaded "xor" operator are not the same length (16 vs. 1).
+# ** Error (suppressible): gcd.vhd(49): (vcom-1272) Length of expected is 17; length of actual is 16.
+# ** Error (suppressible): gcd.vhd(52): (vcom-1272) Length of expected is 17; length of actual is 18.
+# ** Error: gcd.vhd(118): VHDL Compiler exiting
+# End time: 03:00:49 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 1
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 03:04:37 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Error: gcd.vhd(49): Signal "swap_a_b" is type ieee.NUMERIC_STD.UNSIGNED; expecting type ieee.std_logic_1164.STD_ULOGIC.
+# ** Warning: gcd.vhd(49): (vcom-1275) Arguments of overloaded "xor" operator are not the same length (16 vs. 1).
+# ** Error (suppressible): gcd.vhd(49): (vcom-1272) Length of expected is 17; length of actual is 16.
+# ** Error (suppressible): gcd.vhd(52): (vcom-1272) Length of expected is 17; length of actual is 18.
+# ** Error: gcd.vhd(118): VHDL Compiler exiting
+# End time: 03:04:37 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 1
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 03:05:09 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Warning: gcd.vhd(49): (vcom-1275) Arguments of overloaded "xor" operator are not the same length (16 vs. 1).
+# ** Error (suppressible): gcd.vhd(49): (vcom-1272) Length of expected is 17; length of actual is 16.
+# ** Error (suppressible): gcd.vhd(52): (vcom-1272) Length of expected is 17; length of actual is 18.
+# ** Error: gcd.vhd(118): VHDL Compiler exiting
+# End time: 03:05:09 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 1
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 03:05:27 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Error: gcd.vhd(49): (vcom-1389) OTHERS aggregate cannot be operand of operator with unconstrained array formal.
+# ** Error (suppressible): gcd.vhd(52): (vcom-1272) Length of expected is 17; length of actual is 18.
+# ** Error: gcd.vhd(118): VHDL Compiler exiting
+# End time: 03:05:27 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 03:12:05 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Warning: gcd.vhd(49): (vcom-1275) Arguments of overloaded "xor" operator are not the same length (16 vs. 17).
+# ** Error (suppressible): gcd.vhd(49): (vcom-1272) Length of expected is 17; length of actual is 16.
+# ** Error (suppressible): gcd.vhd(52): (vcom-1272) Length of expected is 17; length of actual is 18.
+# ** Error: gcd.vhd(118): VHDL Compiler exiting
+# End time: 03:12:05 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 1
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 03:12:50 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Error (suppressible): gcd.vhd(49): (vcom-1272) Length of expected is 17; length of actual is 16.
+# ** Error (suppressible): gcd.vhd(52): (vcom-1272) Length of expected is 17; length of actual is 18.
+# ** Error: gcd.vhd(118): VHDL Compiler exiting
+# End time: 03:12:50 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 03:14:56 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# ** Warning: gcd.vhd(49): (vcom-1275) Arguments of overloaded "xor" operator are not the same length (16 vs. 17).
+# ** Error (suppressible): gcd.vhd(49): (vcom-1272) Length of expected is 17; length of actual is 16.
+# ** Error: gcd.vhd(118): VHDL Compiler exiting
+# End time: 03:14:56 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 1
+# ** Error: /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./resrun.do line 2
+# /home/thor/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom gcd.vhd"
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 03:15:15 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 03:15:15 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 140 ns  Iteration: 3  Instance: /testbench/GCD_module/u2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 3  Instance: /testbench/GCD_module/u2
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 03:16:30 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 03:16:30 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 150 ns.
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 03:17:23 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 03:17:23 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+# ** Failure: Test passed
+#    Time: 2530 ns  Iteration: 5  Process: /testbench/environment/line__62 File: ../task1/env.vhd
+# Break in Process line__62 at ../task1/env.vhd line 117
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 03:18:02 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 03:18:02 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 150 ns.
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 03:18:14 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 03:18:14 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 03:19:48 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 03:19:48 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 140 ns  Iteration: 4  Instance: /testbench/GCD_module/u2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 140 ns  Iteration: 5  Instance: /testbench/GCD_module/u2
+do resrun.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 03:21:44 on Oct 09,2017
+# vcom -reportprogress 300 gcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gcd
+# -- Compiling architecture FSMD of gcd
+# End time: 03:21:44 on Oct 09,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.gcd(fsmd)
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 150 ns.
+# End time: 03:23:09 on Oct 09,2017, Elapsed time: 2:38:58
+# Errors: 89, Warnings: 14

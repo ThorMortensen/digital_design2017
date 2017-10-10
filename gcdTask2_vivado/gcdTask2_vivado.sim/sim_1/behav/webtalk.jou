@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Tue Oct 10 02:47:35 2017
+# Process ID: 24867
+# Current directory: /home/thor/digital_design2017/gcdTask2_vivado/gcdTask2_vivado.sim/sim_1/behav
+# Command line: wbtcv -mode batch -source /home/thor/digital_design2017/gcdTask2_vivado/gcdTask2_vivado.sim/sim_1/behav/xsim.dir/gcd_sys_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/thor/digital_design2017/gcdTask2_vivado/gcdTask2_vivado.sim/sim_1/behav/webtalk.log
+# Journal file: /home/thor/digital_design2017/gcdTask2_vivado/gcdTask2_vivado.sim/sim_1/behav/webtalk.jou
+#-----------------------------------------------------------
+source /home/thor/digital_design2017/gcdTask2_vivado/gcdTask2_vivado.sim/sim_1/behav/xsim.dir/gcd_sys_behav/webtalk/xsim_webtalk.tcl -notrace

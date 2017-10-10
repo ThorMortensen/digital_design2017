@@ -1,0 +1,17 @@
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /home/thor/Xillinx/Vivado/2016.4/bin/unwrapped/lnx64.o/xelab -wto 62cff71aba3b4b348e30dc4bba939ba2 --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot gcd_sys_behav xil_defaultlib.gcd_sys -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.debounce [debounce_default]
+Compiling architecture fsmd of entity xil_defaultlib.gcd [gcd_default]
+Compiling architecture fsmd_io of entity xil_defaultlib.gcd_sys
+Built simulation snapshot gcd_sys_behav

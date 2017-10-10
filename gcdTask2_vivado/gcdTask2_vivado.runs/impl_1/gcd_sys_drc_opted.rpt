@@ -1,14 +1,14 @@
-Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2016.4 (lin64) Build 1733598 Wed Dec 14 22:35:42 MST 2016
-| Date         : Tue Oct 10 02:40:32 2017
-| Host         : tlinuxd running 64-bit Ubuntu 16.04.3 LTS
-| Command      : report_drc -file gcd_sys_drc_opted.rpt
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
+| Date         : Wed Oct 11 00:17:06 2017
+| Host         : thm-Linux running 64-bit Ubuntu 16.04.3 LTS
+| Command      : report_drc -file gcd_sys_drc_opted.rpt -pb gcd_sys_drc_opted.pb -rpx gcd_sys_drc_opted.rpx
 | Design       : gcd_sys
 | Device       : xc7a100tcsg324-1
 | Speed File   : -1
 | Design State : Synthesized
-------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
 
 Report DRC
 

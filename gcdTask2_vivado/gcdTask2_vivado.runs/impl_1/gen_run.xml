@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1507595994">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1507673708">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="gcd_sys.drc"/>
   <File Type="BG-BGN" Name="gcd_sys.bgn"/>
   <File Type="BITSTR-SYSDEF" Name="gcd_sys.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="gcd_sys.ltx"/>
   <File Type="BITSTR-MMI" Name="gcd_sys.mmi"/>
   <File Type="BITSTR-BMM" Name="gcd_sys_bd.bmm"/>
   <File Type="BITSTR-NKY" Name="gcd_sys.nky"/>
@@ -39,7 +41,7 @@
   <File Type="PHYSOPT-DRC" Name="gcd_sys_drc_physopted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="gcd_sys_physopt.dcp"/>
   <File Type="POSTPLACE-PWROPT-TIMING" Name="gcd_sys_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="RDI-RDI" Name="gcd_sys.vdi"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="gcd_sys_postplace_pwropt.dcp"/>
   <File Type="PLACE-TIMING" Name="gcd_sys_timing_summary_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="gcd_sys_incremental_reuse_pre_placed.rpt"/>
   <File Type="PLACE-SIMILARITY" Name="gcd_sys_incremental_reuse_placed.rpt"/>
@@ -48,17 +50,18 @@
   <File Type="PLACE-UTIL" Name="gcd_sys_utilization_placed.rpt"/>
   <File Type="PLACE-CLK" Name="gcd_sys_clock_utilization_placed.rpt"/>
   <File Type="PLACE-IO" Name="gcd_sys_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="gcd_sys_placed.dcp"/>
+  <File Type="RDI-RDI" Name="gcd_sys.vdi"/>
   <File Type="PWROPT-TIMING" Name="gcd_sys_timing_summary_pwropted.rpt"/>
   <File Type="PWROPT-DRC" Name="gcd_sys_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="gcd_sys_pwropt.dcp"/>
   <File Type="OPT-TIMING" Name="gcd_sys_timing_summary_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="gcd_sys.hwdef"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="gcd_sys_methodology_drc_opted.rpt"/>
   <File Type="OPT-DRC" Name="gcd_sys_drc_opted.rpt"/>
   <File Type="OPT-DCP" Name="gcd_sys_opt.dcp"/>
   <File Type="INIT-TIMING" Name="gcd_sys_timing_summary_init.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="gcd_sys_postplace_pwropt.dcp"/>
+  <File Type="PWROPT-DCP" Name="gcd_sys_pwropt.dcp"/>
+  <File Type="REPORTS-TCL" Name="gcd_sys_reports.tcl"/>
+  <File Type="PLACE-DCP" Name="gcd_sys_placed.dcp"/>
   <File Type="PA-TCL" Name="gcd_sys.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
@@ -88,7 +91,7 @@
     </File>
     <File Path="$PPRDIR/../lab1/task2/debounce_sim.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -112,9 +115,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

@@ -3,24 +3,24 @@
 # 
 # Vivado(TM)
 # runme.sh: a Vivado-generated Runs Script for UNIX
-# Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+# Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/home/thor/Xillinx/Vivado/2016.4/ids_lite/ISE/bin/lin64:/home/thor/Xillinx/Vivado/2016.4/bin
+  PATH=/home/thm/SDK/2017.3/bin:/home/thm/Vivado/2017.3/ids_lite/ISE/bin/lin64:/home/thm/Vivado/2017.3/bin
 else
-  PATH=/home/thor/Xillinx/Vivado/2016.4/ids_lite/ISE/bin/lin64:/home/thor/Xillinx/Vivado/2016.4/bin:$PATH
+  PATH=/home/thm/SDK/2017.3/bin:/home/thm/Vivado/2017.3/ids_lite/ISE/bin/lin64:/home/thm/Vivado/2017.3/bin:$PATH
 fi
 export PATH
 
 if [ -z "$LD_LIBRARY_PATH" ]; then
-  LD_LIBRARY_PATH=/home/thor/Xillinx/Vivado/2016.4/ids_lite/ISE/lib/lin64
+  LD_LIBRARY_PATH=/home/thm/Vivado/2017.3/ids_lite/ISE/lib/lin64
 else
-  LD_LIBRARY_PATH=/home/thor/Xillinx/Vivado/2016.4/ids_lite/ISE/lib/lin64:$LD_LIBRARY_PATH
+  LD_LIBRARY_PATH=/home/thm/Vivado/2017.3/ids_lite/ISE/lib/lin64:$LD_LIBRARY_PATH
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/thor/digital_design2017/gcdTask2_vivado/gcdTask2_vivado.runs/impl_1'
+HD_PWD='/home/thm/digital_design2017/gcdTask2_vivado/gcdTask2_vivado.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

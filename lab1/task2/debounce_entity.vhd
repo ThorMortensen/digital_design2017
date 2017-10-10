@@ -1,6 +1,7 @@
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.NUMERIC_STD.ALL;
+use ieee.std_logic_misc.all;
 
 ENTITY debounce IS
     PORT ( clk:			IN  STD_LOGIC;

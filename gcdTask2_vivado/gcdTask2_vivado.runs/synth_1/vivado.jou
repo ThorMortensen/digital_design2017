@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2016.4 (64-bit)
-# SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
-# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
-# Start of session at: Tue Oct 10 02:39:54 2017
-# Process ID: 21460
-# Current directory: /home/thor/digital_design2017/gcdTask2_vivado/gcdTask2_vivado.runs/synth_1
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Wed Oct 11 00:15:10 2017
+# Process ID: 13628
+# Current directory: /home/thm/digital_design2017/gcdTask2_vivado/gcdTask2_vivado.runs/synth_1
 # Command line: vivado -log gcd_sys.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source gcd_sys.tcl
-# Log file: /home/thor/digital_design2017/gcdTask2_vivado/gcdTask2_vivado.runs/synth_1/gcd_sys.vds
-# Journal file: /home/thor/digital_design2017/gcdTask2_vivado/gcdTask2_vivado.runs/synth_1/vivado.jou
+# Log file: /home/thm/digital_design2017/gcdTask2_vivado/gcdTask2_vivado.runs/synth_1/gcd_sys.vds
+# Journal file: /home/thm/digital_design2017/gcdTask2_vivado/gcdTask2_vivado.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source gcd_sys.tcl -notrace

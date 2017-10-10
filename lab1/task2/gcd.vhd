@@ -47,17 +47,87 @@ BEGIN
 -- Sequential logic
 
 --src0 <= reg_a & '1';
---src1 <= (reg_b xor (15 downto 0 => swap_a_b)) & swap_a_b;--(others => swap_a_b);
+--src1 <= (reg_b xor (15 downto 0 => swap_a_b)) & swap_a_b;--(others =>       swap_a_b);
 
 --sum <= ((reg_a & '1') - ((reg_b xor (15 downto 0 => swap_a_b)) & swap_a_b));
 --res <= sum(16 downto 1); 
 
 
 
+------------------------------------------------------------------------
+----          For test b
+------------------------------------------------------------------------
+---- Sequential logic
+--res <= (reg_a - reg_b); 
+
+---- Combinatorial logic
+--CL: PROCESS (req,AB,state,reg_a,reg_b, res)
+--BEGIN
+--  next_state <= state;
+--  ack <= '0';
+--  next_reg_a <= reg_a;
+--  next_reg_b <= reg_b;
+--  --swap_a_b <= '0';
+
+--   CASE (state) IS
+--      when IDLE => 
+--        --ack <= '1';
+
+--        if req = '1' then 
+--          next_state <= LOAD_A;
+--          ack <= '1';
+--          next_reg_a <= AB;
+--        end if;
+--      when LOAD_A =>
+
+--        -- Comment in for board
+--        --ack <= '1';
+--        --if req = '0' then
+--        --  next_state <= HOLD;
+--        --end if;
+
+--        if req = '1' then
+--          next_state <= LOAD_B;
+--        end if;
+
+--      when LOAD_B =>
+--        next_reg_b <= AB;
+
+--        if req = '0' then
+--          next_state <= CALC;
+--          --next_state <= LOAD_B;
+--        end if;
+
+--        --next_state <= CALC;
+--      when CALC => 
+--        if res = 0  then -- Check equality (a - b == 0)
+--          ack <= '1';
+--          next_state <= IDLE;
+--        elsif a_lessthan_b = '1' then  -- Check a < b --> a - b == a < 0
+--            --swap_a_b <= '1';
+--            next_reg_b <=  not res + 1; -- Invert sign to get b - a
+--        else
+--            next_reg_a <= res;
+--        end if;
+
+--      when HOLD =>
+--        if req = '1' then
+--          next_state <= LOAD_B;
+--        end if;
+
+--      when others => 
+--        null;
+
+--   END CASE;
+--END PROCESS CL;
+
+
+
+----------------------------------------------------------------------
+--          For test b
+----------------------------------------------------------------------
 -- Sequential logic
-
 res <= (reg_a - reg_b); 
-
 
 -- Combinatorial logic
 CL: PROCESS (req,AB,state,reg_a,reg_b, res)
@@ -66,7 +136,6 @@ BEGIN
   ack <= '0';
   next_reg_a <= reg_a;
   next_reg_b <= reg_b;
-  --swap_a_b <= '0';
 
    CASE (state) IS
       when IDLE => 
@@ -74,41 +143,52 @@ BEGIN
 
         if req = '1' then 
           next_state <= LOAD_A;
-          ack <= '1';
           next_reg_a <= AB;
+          ack <= '1';
+
         end if;
+
       when LOAD_A =>
         ack <= '1';
+
         if req = '0' then
-          next_state <= HOLD;
+          next_state <= LOAD_B;
         end if;
 
-        --        if req = '1' then
-        --  next_state <= LOAD_B;
-        --end if;
       when LOAD_B =>
-        next_reg_b <= AB;
 
-        if req = '0' then
+        if req = '1' then
+          next_reg_b <= AB;
           next_state <= CALC;
           --next_state <= LOAD_B;
         end if;
 
-        --next_state <= CALC;
+
+        --if req = '0' then
+
+        --  --next_state <= LOAD_B;
+        --end if;
+
       when CALC => 
+        
         if res = 0  then -- Check equality (a - b == 0)
-          ack <= '1';
-          next_state <= IDLE;
+
+          --if req = '0' then
+            next_state <= HOLD;
+          --end if;
+          --ack <= '1';
+          
         elsif a_lessthan_b = '1' then  -- Check a < b --> a - b == a < 0
-            --swap_a_b <= '1';
             next_reg_b <=  not res + 1; -- Invert sign to get b - a
         else
             next_reg_a <= res;
         end if;
 
       when HOLD =>
-        if req = '1' then
-          next_state <= LOAD_B;
+        ack <= '1';
+
+        if req = '0' then
+          next_state <= IDLE;
         end if;
 
       when others => 
@@ -116,6 +196,7 @@ BEGIN
 
    END CASE;
 END PROCESS CL;
+
 
 
 -- Registers

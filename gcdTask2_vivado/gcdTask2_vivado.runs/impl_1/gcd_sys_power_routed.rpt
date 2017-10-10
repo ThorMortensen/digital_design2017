@@ -1,8 +1,8 @@
-Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2016.4 (lin64) Build 1733598 Wed Dec 14 22:35:42 MST 2016
-| Date             : Tue Oct 10 02:40:49 2017
-| Host             : tlinuxd running 64-bit Ubuntu 16.04.3 LTS
+| Tool Version     : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
+| Date             : Wed Oct 11 00:17:38 2017
+| Host             : thm-Linux running 64-bit Ubuntu 16.04.3 LTS
 | Command          : report_power -file gcd_sys_power_routed.rpt -pb gcd_sys_power_summary_routed.pb -rpx gcd_sys_power_routed.rpx
 | Design           : gcd_sys
 | Device           : xc7a100tcsg324-1
@@ -29,18 +29,21 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+-------+
-| Total On-Chip Power (W)  | 0.103 |
-| Dynamic (W)              | 0.006 |
-| Device Static (W)        | 0.097 |
-| Effective TJA (C/W)      | 4.6   |
-| Max Ambient (C)          | 84.5  |
-| Junction Temperature (C) | 25.5  |
-| Confidence Level         | Low   |
-| Setting File             | ---   |
-| Simulation Activity File | ---   |
-| Design Nets Matched      | NA    |
-+--------------------------+-------+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 0.103        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.006        |
+| Device Static (W)        | 0.097        |
+| Effective TJA (C/W)      | 4.6          |
+| Max Ambient (C)          | 84.5         |
+| Junction Temperature (C) | 25.5         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
 1.1 On-Chip Components
@@ -50,12 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      224 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      123 |     63400 |            0.19 |
-|   CARRY4       |    <0.001 |       18 |     15850 |            0.11 |
-|   Register     |    <0.001 |       59 |    126800 |            0.05 |
+| Slice Logic    |    <0.001 |      177 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       87 |     63400 |            0.14 |
+|   CARRY4       |    <0.001 |       12 |     15850 |            0.08 |
+|   Register     |    <0.001 |       73 |    126800 |            0.06 |
 |   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |    <0.001 |      158 |       --- |             --- |
+| Signals        |    <0.001 |      154 |       --- |             --- |
 | I/O            |     0.004 |       36 |       210 |           17.14 |
 | Static Power   |     0.097 |          |           |                 |
 | Total          |     0.103 |          |           |                 |
@@ -138,7 +141,7 @@ Table of Contents
 | Name    | Power (W) |
 +---------+-----------+
 | gcd_sys |     0.006 |
-|   u1    |     0.001 |
+|   u1    |    <0.001 |
 |   u2    |     0.001 |
 +---------+-----------+
 

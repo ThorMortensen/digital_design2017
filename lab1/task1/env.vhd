@@ -73,7 +73,6 @@ BEGIN
                 req  <= '1';
                 AB   <= TO_UNSIGNED(a_Operands(test_number),AB'length);
                                                -- The a operant is converted to a std_logic_vector
-
                 IF ack = '0' THEN              -- wait until finish signal ack is one
                     next_state <= INPUT_A;
                 ELSE                           -- then set next_state to DONE
@@ -81,7 +80,9 @@ BEGIN
                 END IF;
 
             WHEN DONE_A =>
+                --wait for 200 ns;
                 req  <= '0';                   -- Phase 3 of handshaking protocol.
+                
                 AB   <= (others => 'X');       -- remove A
 
                 IF ack = '1' THEN              -- wait until GCD module finishes the
@@ -146,5 +147,15 @@ BEGIN
         WAIT FOR period;
     END PROCESS;
     clk <= clk_gen;
+
+
+
+
+
+
+
+
+
+
 
 END behaviour;

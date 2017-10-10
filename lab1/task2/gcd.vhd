@@ -26,7 +26,7 @@ END gcd;
 
 ARCHITECTURE FSMD OF gcd IS
 
-TYPE state_type IS (IDLE, LOAD_A, LOAD_B, CALC, HOLD); -- Input your own state names
+TYPE state_type IS (IDLE, LOAD_A, LOAD_B, CALC, HOLD, CALC_B , SWAP); -- Input your own state names
 
 signal reg_a,next_reg_a,next_reg_b,reg_b : unsigned(15 downto 0) := (others => '0'); 
 signal state, next_state : state_type := IDLE;
@@ -34,112 +34,44 @@ signal state, next_state : state_type := IDLE;
 signal res : unsigned(15 downto 0) := (others => '0');
 alias a_lessthan_b : std_logic is res(15); 
 
---signal swap_a_b : std_logic;--(0 downto 0);
---signal src0     : unsigned(16 downto 0);
---signal src1     : unsigned(16 downto 0);
---signal sum     : unsigned(16 downto 0);
+signal swap_a_b : std_logic;--(0 downto 0);
+signal src0     : unsigned(16 downto 0);
+signal src1     : unsigned(16 downto 0);
+signal sum     : unsigned(16 downto 0);
 
 
 
 BEGIN
 
 
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+--                  Improved Design 
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
 -- Sequential logic
 
---src0 <= reg_a & '1';
---src1 <= (reg_b xor (15 downto 0 => swap_a_b)) & swap_a_b;--(others =>       swap_a_b);
+src0 <= reg_a & '1';
+src1 <= (reg_b xor (15 downto 0 => swap_a_b)) & swap_a_b;--(others =>       swap_a_b);
 
 --sum <= ((reg_a & '1') - ((reg_b xor (15 downto 0 => swap_a_b)) & swap_a_b));
---res <= sum(16 downto 1); 
+sum <= (src0 - src1);
+res <= sum(16 downto 1); 
 
 
-
-------------------------------------------------------------------------
-----          For test b
-------------------------------------------------------------------------
 ---- Sequential logic
---res <= (reg_a - reg_b); 
-
----- Combinatorial logic
---CL: PROCESS (req,AB,state,reg_a,reg_b, res)
---BEGIN
---  next_state <= state;
---  ack <= '0';
---  next_reg_a <= reg_a;
---  next_reg_b <= reg_b;
---  --swap_a_b <= '0';
-
---   CASE (state) IS
---      when IDLE => 
---        --ack <= '1';
-
---        if req = '1' then 
---          next_state <= LOAD_A;
---          ack <= '1';
---          next_reg_a <= AB;
---        end if;
---      when LOAD_A =>
-
---        -- Comment in for board
---        --ack <= '1';
---        --if req = '0' then
---        --  next_state <= HOLD;
---        --end if;
-
---        if req = '1' then
---          next_state <= LOAD_B;
---        end if;
-
---      when LOAD_B =>
---        next_reg_b <= AB;
-
---        if req = '0' then
---          next_state <= CALC;
---          --next_state <= LOAD_B;
---        end if;
-
---        --next_state <= CALC;
---      when CALC => 
---        if res = 0  then -- Check equality (a - b == 0)
---          ack <= '1';
---          next_state <= IDLE;
---        elsif a_lessthan_b = '1' then  -- Check a < b --> a - b == a < 0
---            --swap_a_b <= '1';
---            next_reg_b <=  not res + 1; -- Invert sign to get b - a
---        else
---            next_reg_a <= res;
---        end if;
-
---      when HOLD =>
---        if req = '1' then
---          next_state <= LOAD_B;
---        end if;
-
---      when others => 
---        null;
-
---   END CASE;
---END PROCESS CL;
-
-
-
-----------------------------------------------------------------------
---          For test b
-----------------------------------------------------------------------
--- Sequential logic
-res <= (reg_a - reg_b); 
-
--- Combinatorial logic
-CL: PROCESS (req,AB,state,reg_a,reg_b, res)
+CL_improved: PROCESS (req,AB,state,reg_a,reg_b, res)
 BEGIN
   next_state <= state;
   ack <= '0';
   next_reg_a <= reg_a;
   next_reg_b <= reg_b;
+  swap_a_b <= '0';
 
    CASE (state) IS
       when IDLE => 
-        --ack <= '1';
 
         if req = '1' then 
           next_state <= LOAD_A;
@@ -149,44 +81,41 @@ BEGIN
         end if;
 
       when LOAD_A =>
-        ack <= '1';
 
+        ack <= '1';
         if req = '0' then
           next_state <= LOAD_B;
         end if;
-
+      
       when LOAD_B =>
 
         if req = '1' then
           next_reg_b <= AB;
           next_state <= CALC;
-          --next_state <= LOAD_B;
         end if;
-
-
-        --if req = '0' then
-
-        --  --next_state <= LOAD_B;
-        --end if;
 
       when CALC => 
         
         if res = 0  then -- Check equality (a - b == 0)
-
-          --if req = '0' then
             next_state <= HOLD;
-          --end if;
-          --ack <= '1';
-          
         elsif a_lessthan_b = '1' then  -- Check a < b --> a - b == a < 0
-            next_reg_b <=  not res + 1; -- Invert sign to get b - a
+          next_state <= SWAP;
+
         else
             next_reg_a <= res;
         end if;
 
+      when SWAP =>
+        swap_a_b <= '1';
+        next_state <= CALC_B;
+
+      when CALC_B =>
+        swap_a_b <= '1';
+        next_reg_b <= res; -- Invert sign to get b - a
+        next_state <= CALC;
+
       when HOLD =>
         ack <= '1';
-
         if req = '0' then
           next_state <= IDLE;
         end if;
@@ -195,7 +124,73 @@ BEGIN
         null;
 
    END CASE;
-END PROCESS CL;
+END PROCESS CL_improved;
+
+
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+--                  Original Design 
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+
+---- Sequential logic
+--res <= (reg_a - reg_b); 
+
+---- Combinatorial logic
+--CL_original: PROCESS (req,AB,state,reg_a,reg_b, res)
+--BEGIN
+--  next_state <= state;
+--  ack <= '0';
+--  next_reg_a <= reg_a;
+--  next_reg_b <= reg_b;
+
+--   CASE (state) IS
+--      when IDLE => 
+
+--        if req = '1' then 
+--          next_state <= LOAD_A;
+--          next_reg_a <= AB;
+--          ack <= '1';
+
+--        end if;
+
+--      when LOAD_A =>
+
+--        ack <= '1';
+--        if req = '0' then
+--          next_state <= LOAD_B;
+--        end if;
+      
+--      when LOAD_B =>
+
+--        if req = '1' then
+--          next_reg_b <= AB;
+--          next_state <= CALC;
+--        end if;
+
+--      when CALC => 
+        
+--        if res = 0  then -- Check equality (a - b == 0)
+--            next_state <= HOLD;
+--        elsif a_lessthan_b = '1' then  -- Check a < b --> a - b == a < 0
+--            next_reg_b <=  not res + 1; -- Invert sign to get b - a
+--        else
+--            next_reg_a <= res;
+--        end if;
+
+--      when HOLD =>
+--        ack <= '1';
+--        if req = '0' then
+--          next_state <= IDLE;
+--        end if;
+
+--      when others => 
+--        null;
+
+--   END CASE;
+--END PROCESS CL_original;
 
 
 

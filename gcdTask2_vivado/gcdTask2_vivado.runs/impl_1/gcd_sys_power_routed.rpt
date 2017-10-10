@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-| Date             : Wed Oct 11 00:17:38 2017
+| Date             : Wed Oct 11 01:19:14 2017
 | Host             : thm-Linux running 64-bit Ubuntu 16.04.3 LTS
 | Command          : report_power -file gcd_sys_power_routed.rpt -pb gcd_sys_power_summary_routed.pb -rpx gcd_sys_power_routed.rpx
 | Design           : gcd_sys
@@ -53,12 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      177 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       87 |     63400 |            0.14 |
-|   CARRY4       |    <0.001 |       12 |     15850 |            0.08 |
-|   Register     |    <0.001 |       73 |    126800 |            0.06 |
+| Slice Logic    |    <0.001 |      172 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       86 |     63400 |            0.14 |
+|   CARRY4       |    <0.001 |       19 |     15850 |            0.12 |
+|   Register     |    <0.001 |       63 |    126800 |            0.05 |
 |   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |    <0.001 |      154 |       --- |             --- |
+| Signals        |    <0.001 |      158 |       --- |             --- |
 | I/O            |     0.004 |       36 |       210 |           17.14 |
 | Static Power   |     0.097 |          |           |                 |
 | Total          |     0.103 |          |           |                 |

@@ -16,23 +16,23 @@
 ARCHITECTURE Behavioral OF debounce IS
 
 constant PRESCALER        : integer := 100000;   
-constant SHIFT_DEPTH      : integer := 20;
+constant SHIFT_DEPTH      : integer := 10;
 signal contact_shift      : std_logic_vector(SHIFT_DEPTH-1 downto 0);
 signal ms_en              : std_logic := '0';
-signal p                  : integer range 0 to PRESCALER := 0 ;
 
 BEGIN
   ---------------------------------------------
   --          Timer 
   ---------------------------------------------  
   db_prescaler : process (clk) is 
+  variable p : integer range 0 to PRESCALER := 0 ;
   begin
     if rising_edge(clk) then 
       ms_en <= '0';
-      p <= p +1;
+      p := p +1;
       if (p = PRESCALER) then 
         ms_en <= '1';
-        p <= 0;
+        p := 0;
       end if;
     end if;
   end process db_prescaler;    
@@ -145,6 +145,6 @@ END Behavioral;
 --        END IF;
 --    END CASE;
 --   END PROCESS; 
-
+--
 --END Behavioral;
 

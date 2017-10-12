@@ -1,0 +1,7 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/thor/digital_design2017/lab1/task2/debounce_entity.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity debounce
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/thor/digital_design2017/lab1/task2/debounce_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/thor/digital_design2017/lab1/task2/gcd.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity gcd
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/thor/digital_design2017/lab1/task2/gcd_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity gcd_sys

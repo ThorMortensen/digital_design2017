@@ -21,7 +21,7 @@ END FSM;
 
 ARCHITECTURE behaviour OF FSM IS
 
-TYPE state_type IS (IDLE, LOAD_A, LOAD_B, CALC_A, CALC_B, RESULT); 
+TYPE state_type IS (IDLE, LOAD_A, LOAD_B, CALC, SWAP, RESULT); 
 
 signal state    : state_type := IDLE;
 signal next_state    : state_type := IDLE;
@@ -44,37 +44,52 @@ begin
 
    case (state) IS
       when IDLE => 
+
         if req = '1' then 
           next_state <= LOAD_A;
           LDA <= '1';
           ack <= '1';
           ABorALU <= '1';
         end if;
+
       when LOAD_A =>
+
         ABorALU <= '1';
-        if req = '1' then
+        if req = '0' then
           next_state <= LOAD_B;
         end if;
+
       when LOAD_B =>
+
         LDB <= '1';
         ABorALU <=  '1' ;
-        next_state <= CALC_A;
-      when CALC_A => 
+
+        if req = '1' then
+          next_state <= CALC;
+        end if;
+
+      when CALC => 
+
         alu_FN  <= SUB_A_B;
         if alu_Z = '1'  then 
           next_state <= RESULT;
         elsif alu_N = '1' then 
-          next_state <= CALC_B;
+          next_state <= SWAP;
         else
           LDA <= '1';
         end if;
-      when CALC_B =>
+
+      when SWAP =>
+
         LDB <= '1';
         alu_FN <= SUB_B_A;
-        next_state <= CALC_A;
+        next_state <= CALC;
+
       when RESULT =>
         ack     <= '1';
-        next_state <= IDLE;
+        if req = '0' then
+          next_state <= IDLE;
+        end if;
       when others => 
         null;
    end case;
@@ -132,7 +147,13 @@ ARCHITECTURE behaviour OF gcd IS
 
 BEGIN
 
-C <= C_intl;
+
+inst_buf : entity work.tri                                
+    generic map (N  => DATA_WIDTH)      -- Width of inputs.
+    port map ( 
+      data_in  => C_intl, -- Input.
+      data_out => C       -- Output.
+      );       
 
 inst_mux : entity work.mux                       
     generic map (N  => DATA_WIDTH)      -- Width of inputs and output.
@@ -187,6 +208,115 @@ inst_fsm : entity work.FSM
       alu_Z     => alu_Z,
       alu_N     => alu_N
     );    
+
+
+-----------------------------------------------------------------------------------
+--Start RTL Component Statistics 
+-----------------------------------------------------------------------------------
+--Detailed RTL Component Info : 
+--+---Adders : 
+--     2 Input     17 Bit       Adders := 1     
+--     3 Input     16 Bit       Adders := 1     
+--+---Registers : 
+--                 16 Bit    Registers := 2     
+--                 10 Bit    Registers := 1     
+--                  1 Bit    Registers := 1     
+--+---Muxes : 
+--     2 Input     16 Bit        Muxes := 1     
+--     4 Input     16 Bit        Muxes := 3     
+--     9 Input      3 Bit        Muxes := 1     
+--     7 Input      2 Bit        Muxes := 1     
+--     2 Input      1 Bit        Muxes := 2     
+--     7 Input      1 Bit        Muxes := 5     
+-----------------------------------------------------------------------------------
+--Finished RTL Component Statistics 
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+--Start RTL Hierarchical Component Statistics 
+-----------------------------------------------------------------------------------
+--Hierarchical RTL Component report 
+--Module debounce 
+--Detailed RTL Component Info : 
+--+---Adders : 
+--     2 Input     17 Bit       Adders := 1     
+--+---Registers : 
+--                 10 Bit    Registers := 1     
+--                  1 Bit    Registers := 1     
+--Module mux 
+--Detailed RTL Component Info : 
+--+---Muxes : 
+--     2 Input     16 Bit        Muxes := 1     
+--Module reg 
+--Detailed RTL Component Info : 
+--+---Registers : 
+--                 16 Bit    Registers := 1     
+--Module alu 
+--Detailed RTL Component Info : 
+--+---Adders : 
+--     3 Input     16 Bit       Adders := 1     
+--+---Muxes : 
+--     4 Input     16 Bit        Muxes := 3     
+--     2 Input      1 Bit        Muxes := 1     
+--Module FSM 
+--Detailed RTL Component Info : 
+--+---Muxes : 
+--     9 Input      3 Bit        Muxes := 1     
+--     7 Input      2 Bit        Muxes := 1     
+--     2 Input      1 Bit        Muxes := 1     
+--     7 Input      1 Bit        Muxes := 5     
+-----------------------------------------------------------------------------------
+--Finished RTL Hierarchical Component Statistics
+-----------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------
+--Start RTL Component Statistics 
+-----------------------------------------------------------------------------------
+--Detailed RTL Component Info : 
+--+---Adders : 
+--     2 Input     17 Bit       Adders := 1     
+--     3 Input     16 Bit       Adders := 1     
+--+---Registers : 
+--                 16 Bit    Registers := 2     
+--                 10 Bit    Registers := 1     
+--                  1 Bit    Registers := 1     
+--+---Muxes : 
+--     2 Input     16 Bit        Muxes := 2     
+--     7 Input     16 Bit        Muxes := 2     
+--     9 Input      3 Bit        Muxes := 1     
+--     2 Input      1 Bit        Muxes := 1     
+--     7 Input      1 Bit        Muxes := 5     
+-----------------------------------------------------------------------------------
+--Finished RTL Component Statistics 
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+--Start RTL Hierarchical Component Statistics 
+-----------------------------------------------------------------------------------
+--Hierarchical RTL Component report 
+--Module debounce 
+--Detailed RTL Component Info : 
+--+---Adders : 
+--     2 Input     17 Bit       Adders := 1     
+--+---Registers : 
+--                 10 Bit    Registers := 1     
+--                  1 Bit    Registers := 1     
+--Module gcd 
+--Detailed RTL Component Info : 
+--+---Adders : 
+--     3 Input     16 Bit       Adders := 1     
+--+---Registers : 
+--                 16 Bit    Registers := 2     
+--+---Muxes : 
+--     2 Input     16 Bit        Muxes := 2     
+--     7 Input     16 Bit        Muxes := 2     
+--     9 Input      3 Bit        Muxes := 1     
+--     2 Input      1 Bit        Muxes := 1     
+--     7 Input      1 Bit        Muxes := 5     
+-----------------------------------------------------------------------------------
+--Finished RTL Hierarchical Component Statistics
+-----------------------------------------------------------------------------------
+
+
 
 
 END behaviour;

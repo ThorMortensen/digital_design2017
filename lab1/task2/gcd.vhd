@@ -14,6 +14,7 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
+use ieee.std_logic_misc.all;
 
 ENTITY gcd IS
     PORT (clk:   IN std_logic;           -- The clock signal.
@@ -26,7 +27,7 @@ END gcd;
 
 ARCHITECTURE FSMD OF gcd IS
 
-TYPE state_type IS (IDLE, LOAD_A, LOAD_B, CALC, HOLD, CALC_B , SWAP); -- Input your own state names
+TYPE state_type IS (IDLE, LOAD_A, LOAD_B, CALC, RESULT, SWAP); -- Input your own state names
 
 signal reg_a,next_reg_a,next_reg_b,reg_b : unsigned(15 downto 0) := (others => '0'); 
 signal state, next_state : state_type := IDLE;
@@ -34,12 +35,9 @@ signal state, next_state : state_type := IDLE;
 signal res : unsigned(15 downto 0) := (others => '0');
 alias a_lessthan_b : std_logic is res(15); 
 
-signal swap_a_b : std_logic;--(0 downto 0);
-signal src0     : unsigned(16 downto 0);
-signal src1     : unsigned(16 downto 0);
-signal sum     : unsigned(16 downto 0);
-
-
+signal swap_a_b : std_logic := '1';
+signal src0     : unsigned(15 downto 0);
+signal src1     : unsigned(15 downto 0);
 
 BEGIN
 
@@ -51,17 +49,11 @@ BEGIN
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
 
--- Sequential logic
+-- Combinatorial logic
+src0 <= reg_a when swap_a_b = '0' else reg_b;
+src1 <= reg_b when swap_a_b = '0' else reg_a; --(others =>       swap_a_b);
+res <= (src0 - src1);
 
-src0 <= reg_a & '1';
-src1 <= (reg_b xor (15 downto 0 => swap_a_b)) & swap_a_b;--(others =>       swap_a_b);
-
---sum <= ((reg_a & '1') - ((reg_b xor (15 downto 0 => swap_a_b)) & swap_a_b));
-sum <= (src0 - src1);
-res <= sum(16 downto 1); 
-
-
----- Sequential logic
 CL_improved: PROCESS (req,AB,state,reg_a,reg_b, res)
 BEGIN
   next_state <= state;
@@ -77,7 +69,6 @@ BEGIN
           next_state <= LOAD_A;
           next_reg_a <= AB;
           ack <= '1';
-
         end if;
 
       when LOAD_A =>
@@ -96,25 +87,20 @@ BEGIN
 
       when CALC => 
         
-        if res = 0  then -- Check equality (a - b == 0)
-            next_state <= HOLD;
+        if or_reduce(std_logic_vector(res)) = '0' then -- Check equality (a - b == 0)
+            next_state <= RESULT;
         elsif a_lessthan_b = '1' then  -- Check a < b --> a - b == a < 0
           next_state <= SWAP;
-
         else
             next_reg_a <= res;
         end if;
 
       when SWAP =>
         swap_a_b <= '1';
-        next_state <= CALC_B;
-
-      when CALC_B =>
-        swap_a_b <= '1';
-        next_reg_b <= res; -- Invert sign to get b - a
+        next_reg_b <= res;
         next_state <= CALC;
 
-      when HOLD =>
+      when RESULT =>
         ack <= '1';
         if req = '0' then
           next_state <= IDLE;
@@ -128,17 +114,68 @@ END PROCESS CL_improved;
 
 
 
+-----------------------------------------------------------------------------------
+--Start RTL Hierarchical Component Statistics   @@@@@@@@  WITH EQUAL  @@@@@@@@
+-----------------------------------------------------------------------------------
+--Hierarchical RTL Component report 
+--Module debounce 
+--Detailed RTL Component Info : 
+--+---Adders : 
+--     2 Input     17 Bit       Adders := 1     
+--+---Registers : 
+--                 10 Bit    Registers := 1     
+--                  1 Bit    Registers := 1     
+--Module gcd 
+--Detailed RTL Component Info : 
+--+---Adders : 
+--     3 Input     16 Bit       Adders := 1     
+--+---Registers : 
+--                 16 Bit    Registers := 2     
+--+---Muxes : 
+--     2 Input     16 Bit        Muxes := 2     
+--     7 Input     16 Bit        Muxes := 2     
+--     9 Input      3 Bit        Muxes := 1     
+--     2 Input      1 Bit        Muxes := 2     
+--     7 Input      1 Bit        Muxes := 5     
+-----------------------------------------------------------------------------------
+--Finished RTL Hierarchical Component Statistics
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+--Start RTL Hierarchical Component Statistics  @@@@@@@@  WITH OR_REDUCE  @@@@@@@@
+-----------------------------------------------------------------------------------
+--Hierarchical RTL Component report 
+--Module debounce 
+--Detailed RTL Component Info : 
+--+---Adders : 
+--     2 Input     17 Bit       Adders := 1     
+--+---Registers : 
+--                 10 Bit    Registers := 1     
+--                  1 Bit    Registers := 1     
+--Module gcd 
+--Detailed RTL Component Info : 
+--+---Adders : 
+--     3 Input     16 Bit       Adders := 1     
+--+---Registers : 
+--                 16 Bit    Registers := 2     
+--+---Muxes : 
+--     2 Input     16 Bit        Muxes := 2     
+--     7 Input     16 Bit        Muxes := 2     
+--     9 Input      3 Bit        Muxes := 1     
+--     2 Input      1 Bit        Muxes := 1   <--- One less mux here 
+--     7 Input      1 Bit        Muxes := 5     
+-----------------------------------------------------------------------------------
+--Finished RTL Hierarchical Component Statistics
+-----------------------------------------------------------------------------------
+
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
 --                  Original Design 
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
 
-
----- Sequential logic
---res <= (reg_a - reg_b); 
-
 ---- Combinatorial logic
+-- res <= (reg_a - reg_b); 
+
 --CL_original: PROCESS (req,AB,state,reg_a,reg_b, res)
 --BEGIN
 --  next_state <= state;
@@ -173,14 +210,14 @@ END PROCESS CL_improved;
 --      when CALC => 
         
 --        if res = 0  then -- Check equality (a - b == 0)
---            next_state <= HOLD;
+--            next_state <= RESULT;
 --        elsif a_lessthan_b = '1' then  -- Check a < b --> a - b == a < 0
 --            next_reg_b <=  not res + 1; -- Invert sign to get b - a
 --        else
 --            next_reg_a <= res;
 --        end if;
 
---      when HOLD =>
+--      when RESULT =>
 --        ack <= '1';
 --        if req = '0' then
 --          next_state <= IDLE;
@@ -191,6 +228,65 @@ END PROCESS CL_improved;
 
 --   END CASE;
 --END PROCESS CL_original;
+
+
+-----------------------------------------------------------------------------------
+--Start RTL Hierarchical Component Statistics  @@@@@@@@  ORIGINAL  @@@@@@@@
+-----------------------------------------------------------------------------------
+--Hierarchical RTL Component report 
+--Module debounce 
+--Detailed RTL Component Info : 
+--+---Adders : 
+--     2 Input     17 Bit       Adders := 1     
+--+---Registers : 
+--                 10 Bit    Registers := 1     
+--                  1 Bit    Registers := 1     
+--Module gcd 
+--Detailed RTL Component Info : 
+--+---Adders : 
+--     3 Input     16 Bit       Adders := 1     
+--     2 Input     16 Bit       Adders := 1     
+--+---Registers : 
+--                 16 Bit    Registers := 2     
+--+---Muxes : 
+--     6 Input     16 Bit        Muxes := 2     
+--     6 Input      3 Bit        Muxes := 1     
+--     2 Input      1 Bit        Muxes := 3     
+--     6 Input      1 Bit        Muxes := 4     
+-----------------------------------------------------------------------------------
+--Finished RTL Hierarchical Component Statistics
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+--Start RTL Hierarchical Component Statistics  @@@@@@@@  OPTIMIZED  @@@@@@@@
+-----------------------------------------------------------------------------------
+--Hierarchical RTL Component report 
+--Module debounce 
+--Detailed RTL Component Info : 
+--+---Adders : 
+--     2 Input     17 Bit       Adders := 1     
+--+---Registers : 
+--                 10 Bit    Registers := 1     
+--                  1 Bit    Registers := 1     
+--Module gcd 
+--Detailed RTL Component Info : 
+--+---Adders :                                <-- One less adder              
+--     3 Input     16 Bit       Adders := 1      
+--+---Registers : 
+--                 16 Bit    Registers := 2     
+--+---Muxes :                                 <-- More muxes 
+--     2 Input     16 Bit        Muxes := 2     
+--     7 Input     16 Bit        Muxes := 2     
+--     9 Input      3 Bit        Muxes := 1     
+--     2 Input      1 Bit        Muxes := 1  
+--     7 Input      1 Bit        Muxes := 5     
+-----------------------------------------------------------------------------------
+--Finished RTL Hierarchical Component Statistics
+-----------------------------------------------------------------------------------
+
+
+
+
+
 
 
 

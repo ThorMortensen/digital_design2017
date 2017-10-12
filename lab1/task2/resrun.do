@@ -6,4 +6,4 @@ vcom ../task1/env.vhd
 vcom ../task1/test.vhd
 
 restart -f
-run 2700 ns
+run 2800 ns
